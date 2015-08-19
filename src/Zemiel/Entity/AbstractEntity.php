@@ -11,15 +11,17 @@ namespace Zemiel\Entity;
 class AbstractEntity
 {
     private $entityData = [];
-    private $propertiesEntity = [];
+    private $entityProperties = [];
 
     public function __construct($data = [])
     {
 
+        $properties = $this->getProperties();
+
         if ($data != null) {
             foreach ($data as $key => $val) {
 
-                if(in_array($this->propertiesEntity, $key)) {
+                if(in_array($properties, $key)) {
                     $this->entityData[$key] = $val;
                 }
 
@@ -33,9 +35,9 @@ class AbstractEntity
         $properties   = $reflect->getProperties(ReflectionProperty::IS_PROTECTED);
 
         foreach ($properties as $property) {
-            $this->propertiesEntity[] = $property->getName();
+            $this->entityProperties[] = $property->getName();
         }
 
-        return $this->propertiesEntity;
+        return $this->entityProperties;
     }
 }
