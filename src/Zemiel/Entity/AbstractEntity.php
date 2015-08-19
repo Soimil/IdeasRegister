@@ -6,15 +6,21 @@
  * Date: 8/19/15
  * Time: 9:26 PM
  */
+namespace Zemiel\Entity;
+
 class AbstractEntity
 {
-    private $_entityData = array();
+    private $entityData = [];
 
-    public function __construct($data = array())
+    public function __construct($listProperties = [], $data = [])
     {
-        if ($data != null) {
+        if ($listProperties != null && $data != null) {
             foreach ($data as $key => $val) {
-                $this->_entityData[$key] = $val;
+
+                if(isset($listProperties[$key])) {
+                    $this->entityData[$key] = $val;
+                }
+
             }
         }
     }
