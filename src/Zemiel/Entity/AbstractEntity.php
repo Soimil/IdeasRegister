@@ -8,11 +8,13 @@
  */
 class AbstractEntity
 {
+    private $_entityData = array();
+
     public function __construct($data = array())
     {
         if ($data != null) {
             foreach ($data as $key => $val) {
-
+                $this->_entityData[$key] = $val;
             }
         }
     }
