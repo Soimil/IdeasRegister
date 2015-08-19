@@ -14,9 +14,9 @@ class AbstractEntity
     private $entityProperties = [];
 
     /**
-     * @param array $data
-     *
      * construct function
+     *
+     * @param array $data
      */
     public function __construct($data = [])
     {
@@ -35,9 +35,9 @@ class AbstractEntity
     }
 
     /**
-     * @return array
-     *
      * getting class properties
+     *
+     * @return array
      */
     public function getProperties()
     {
