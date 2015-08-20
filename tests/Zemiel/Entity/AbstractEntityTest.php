@@ -31,6 +31,10 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
         $data = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white', 'test' => 'error'];
         $to = new TestClass($data);
 
+        $data2 = ['name' => 'Kamil'];
+
+        $to->setEntityData($data2);
+
         foreach ($to->getEntityData() as $key => $val) {
             echo $key . ' - ' . $val;
         }
