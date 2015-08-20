@@ -26,7 +26,7 @@ class AbstractEntity
         if ($data != null) {
             foreach ($data as $key => $val) {
 
-                if(in_array($properties, $key)) {
+                if(in_array($key, $properties)) {
                     $this->entityData[$key] = $val;
                 }
 
@@ -49,5 +49,35 @@ class AbstractEntity
         }
 
         return $this->entityProperties;
+    }
+
+    /**
+     * getting entity data
+     *
+     * @return array
+     */
+    public function getEntityData()
+    {
+        return $this->entityData;
+    }
+
+    /**
+     * setting entity data
+     *
+     * @param array $data
+     */
+    public function setEntityData($data =[])
+    {
+        $properties = $this->getProperties();
+
+        if ($data != null) {
+            foreach ($data as $key => $val) {
+
+                if(in_array($key, $properties)) {
+                    $this->entityData[$key] = $val;
+                }
+
+            }
+        }
     }
 }
