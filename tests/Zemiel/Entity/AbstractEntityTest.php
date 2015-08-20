@@ -36,7 +36,6 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
         $to->setEntityData($data2);
 
         echo  PHP_EOL;
-
         foreach ($to->getEntityData() as $key => $val) {
             echo $key . ' - ' . $val . PHP_EOL;
         }
