@@ -18,7 +18,7 @@ class AbstractEntity
      *
      * @param array $data
      */
-    public function __construct($data = [])
+    public function __construct($data = null)
     {
         if($data != null) {
             $this->setEntityData($data);
@@ -58,7 +58,7 @@ class AbstractEntity
      *
      * @param array $data
      */
-    public function setEntityData($data =[])
+    public function setEntityData($data = null)
     {
         $properties = $this->getProperties();
 
