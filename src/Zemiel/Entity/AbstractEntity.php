@@ -20,18 +20,10 @@ class AbstractEntity
      */
     public function __construct($data = [])
     {
-
-        $properties = $this->getProperties();
-
-        if ($data != null) {
-            foreach ($data as $key => $val) {
-
-                if(in_array($key, $properties)) {
-                    $this->entityData[$key] = $val;
-                }
-
-            }
+        if($data != null) {
+            $this->setEntityData($data);
         }
+
     }
 
     /**
@@ -68,10 +60,12 @@ class AbstractEntity
      */
     public function setEntityData($data =[])
     {
+        $properties = $this->getProperties();
+
         if ($data != null) {
             foreach ($data as $key => $val) {
 
-                if(in_array($key, $this->entityProperties)) {
+                if(in_array($key, $properties)) {
                     $this->entityData[$key] = $val;
                 }
 
