@@ -26,18 +26,17 @@ class TestClass extends AbstractEntity
 
 class AbstractEntityTest extends \PHPUnit_Framework_TestCase
 {
-    public function testPushAndPop()
+
+    public function testCanBeNegated()
     {
         $data = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white', 'test' => 'error'];
-        $to = new TestClass();
+        // Arrange
+        $a = new TestClass();
 
-        $data2 = ['name' => 'Kamil', 'speed' => '230'];
+        $a->setEntityData($data);
 
-        $to->setEntityData($data2);
-
-        echo  PHP_EOL;
-        foreach ($to->getEntityData() as $key => $val) {
-            echo $key . ' - ' . $val . PHP_EOL;
-        }
+        $b = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white'];
+        // Assert
+        $this->assertEquals($b, $a->getEntityData());
     }
 }
