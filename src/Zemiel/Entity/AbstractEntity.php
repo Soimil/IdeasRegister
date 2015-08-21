@@ -33,11 +33,13 @@ class AbstractEntity
      */
     public function getProperties()
     {
-        $reflect = new \ReflectionClass($this);
-        $properties = $reflect->getProperties(\ReflectionProperty::IS_PROTECTED);
+        if(empty($this->entityProperties)) {
+            $reflect = new \ReflectionClass($this);
+            $properties = $reflect->getProperties(\ReflectionProperty::IS_PROTECTED);
 
-        foreach ($properties as $property) {
-            $this->entityProperties[] = $property->getName();
+            foreach ($properties as $property) {
+                $this->entityProperties[] = $property->getName();
+            }
         }
 
         return $this->entityProperties;
