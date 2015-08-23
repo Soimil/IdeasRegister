@@ -46,7 +46,7 @@ class TestClass extends AbstractEntity
 class ExceptionTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @expectedException Exception
+     * @expectedException Data must be array.
      */
     public function testException()
     {
