@@ -60,19 +60,17 @@ class AbstractEntity
      *
      * @param array $data
      */
-    public function setEntityData($data = null)
+    public function setEntityData(array $data = null)
     {
         $properties = $this->getProperties();
 
-        if ($data != null) {
-            if(is_array($data)) {
-                foreach ($data as $key => $val) {
+        if(!empty($data)) {
+            foreach ($data as $key => $val) {
 
-                    if(in_array($key, $properties)) {
-                        $this->entityData[$key] = $val;
-                    }
-
+                if(in_array($key, $properties)) {
+                    $this->entityData[$key] = $val;
                 }
+
             }
         }
     }
