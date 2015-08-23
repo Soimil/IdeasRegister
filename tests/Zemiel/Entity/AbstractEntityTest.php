@@ -54,7 +54,9 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
 
         try {
 
-            $entity = new TestClass($data);
+            if($data) {
+                $entity = new TestClass($data);
+            }
 
         } catch (\Exception $e) {
 
