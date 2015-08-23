@@ -20,7 +20,7 @@ class AbstractEntity
      */
     public function __construct(array $data = null)
     {
-        if($data) {
+        if ($data) {
             $this->setEntityData($data);
         }
 
@@ -33,7 +33,7 @@ class AbstractEntity
      */
     public function getProperties()
     {
-        if(empty($this->entityProperties)) {
+        if (empty($this->entityProperties)) {
             $reflect = new \ReflectionClass($this);
             $properties = $reflect->getProperties(\ReflectionProperty::IS_PROTECTED);
 
@@ -64,7 +64,7 @@ class AbstractEntity
     {
         $properties = $this->getProperties();
 
-        if($data) {
+        if ($data) {
             foreach ($data as $key => $val) {
 
                 if(in_array($key, $properties)) {
