@@ -24,29 +24,26 @@ class TestClass extends AbstractEntity
 
 }
 
-//class AbstractEntityTest extends \PHPUnit_Framework_TestCase
-//{
-//
-//    public function testPushAndPop()
-//    {
-//        $data = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white', 'test' => 'error'];
-//
-//        //$data = "test";
-//
-//        $a = new TestClass();
-//
-//        $a->setEntityData($data);
-//
-//        $b = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white'];
-//
-//        $this->assertEquals($b, $a->getEntityData());
-//    }
-//}
-
-class ExceptionTest extends \PHPUnit_Framework_TestCase
+class AbstractEntityTest extends \PHPUnit_Framework_TestCase
 {
+
+    public function testPushAndPop()
+    {
+        $data = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white', 'test' => 'error'];
+
+        //$data = "test";
+
+        $a = new TestClass();
+
+        $a->setEntityData($data);
+
+        $b = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white'];
+
+        $this->assertEquals($b, $a->getEntityData());
+    }
+
     /**
-     * @expectedException TestClass.
+     * @exception TestClass.
      */
     public function testException()
     {
