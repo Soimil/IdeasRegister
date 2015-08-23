@@ -20,7 +20,7 @@ class AbstractEntity
      */
     public function __construct(array $data = null)
     {
-        if(!empty($data)) {
+        if($data) {
             $this->setEntityData($data);
         }
 
