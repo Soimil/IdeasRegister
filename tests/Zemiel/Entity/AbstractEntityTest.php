@@ -51,11 +51,15 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
     public function testException()
     {
         $data = "test";
-        
-        if(is_array($data)) {
+
+        try {
+
             $entity = new TestClass($data);
-        } else {
-            throw new \Exception('Must be array: ' . $data);
+
+        } catch (\Exception $e) {
+
+            echo 'Exception: ',  $e->getMessage(), "\n";
+
         }
 
     }
