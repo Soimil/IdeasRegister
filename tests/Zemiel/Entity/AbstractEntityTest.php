@@ -46,7 +46,7 @@ class TestClass extends AbstractEntity
 class ExceptionTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @Exception InvalidArgumentException
+     * @Exception Exception
      */
     public function testException()
     {

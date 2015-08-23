@@ -64,7 +64,7 @@ class AbstractEntity
     {
         $properties = $this->getProperties();
 
-        if(!empty($data)) {
+        if($data) {
             foreach ($data as $key => $val) {
 
                 if(in_array($key, $properties)) {
