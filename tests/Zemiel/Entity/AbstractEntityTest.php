@@ -43,7 +43,7 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @exception TestClass.
+     * @expectedException Exception.
      */
     public function testException()
     {
