@@ -46,21 +46,13 @@ class TestClass extends AbstractEntity
 class ExceptionTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @Exception Exception
+     * @expectedException Exception
      */
     public function testException()
     {
         $data = "test";
 
-        try {
-
-            $entity = new TestClass($data);
-
-        } catch (\Exception $e) {
-
-            echo 'Exception: ',  $e->getMessage(), "\n";
-
-        }
+        $entity = new TestClass($data);
 
     }
 }
