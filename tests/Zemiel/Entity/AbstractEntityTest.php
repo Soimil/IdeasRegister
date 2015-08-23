@@ -27,9 +27,11 @@ class TestClass extends AbstractEntity
 class AbstractEntityTest extends \PHPUnit_Framework_TestCase
 {
 
-    public function testCanBeNegated()
+    public function testPushAndPop()
     {
-        $data = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white', 'test' => 'error'];
+        //$data = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white', 'test' => 'error'];
+
+        $data = "test";
 
         $a = new TestClass();
 
