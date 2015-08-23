@@ -18,9 +18,9 @@ class AbstractEntity
      *
      * @param array $data
      */
-    public function __construct($data = null)
+    public function __construct(array $data = null)
     {
-        if($data != null) {
+        if(!empty($data)) {
             $this->setEntityData($data);
         }
 
