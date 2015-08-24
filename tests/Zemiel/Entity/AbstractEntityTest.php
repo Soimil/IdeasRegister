@@ -29,7 +29,7 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
 
     public function testPushAndPop()
     {
-        $data = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white', 'test' => 'error'];
+        $data = ['name' => 'Piotr', 'type' => 'man', 'test' => 'error'];
 
         //$data = "test";
 
@@ -37,7 +37,7 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
 
         $a->setEntityData($data);
 
-        $b = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white'];
+        $b = ['name' => 'Piotr', 'type' => 'man', 'color' => 'white', 'price' => null];
 
         $this->assertEquals($b, $a->getEntityData());
     }
