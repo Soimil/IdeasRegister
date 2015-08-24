@@ -52,7 +52,15 @@ class AbstractEntity
      */
     public function getEntityData()
     {
-        return $this->getProperties();
+        $properties = $this->getProperties();
+
+        $array = [];
+
+        foreach ($properties as $property) {
+            $array[$property] = $this->$property;
+        }
+
+        return $array;
     }
 
     /**
