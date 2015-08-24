@@ -52,7 +52,8 @@ class AbstractEntity
      */
     public function getEntityData()
     {
-        return $this->entityData;
+        //return $this->entityData;
+        return $this->getProperties();
     }
 
     /**
@@ -65,12 +66,15 @@ class AbstractEntity
         $properties = $this->getProperties();
 
         if ($data) {
-            foreach ($data as $key => $val) {
-
-                if(in_array($key, $properties)) {
-                    $this->entityData[$key] = $val;
-                }
-
+//            foreach ($data as $key => $val) {
+//
+//                if(in_array($key, $properties)) {
+//                    $this->entityData[$key] = $val;
+//                }
+//
+//            }
+            foreach ($properties as $property) {
+                $this->$property = $data[$property] ? $data[$property] : null;
             }
         }
     }
