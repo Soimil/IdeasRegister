@@ -76,7 +76,7 @@ class AbstractEntity
             return false;
         }
 
-        $methods = get_class_methods(__CLASS__);
+        $methods = get_class_methods(get_called_class());
 
         foreach ($properties as $property) {
 

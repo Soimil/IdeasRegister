@@ -26,7 +26,7 @@ class TestClass extends AbstractEntity
     public function setHeight($data)
     {
         if($data > 220 || !is_int($data)) {
-            return false;
+            return null;
         }
 
         return $data;
@@ -45,7 +45,7 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
 
         $a->setEntityData($data);
 
-        $b = ['height' => 250];
+        $b = ['height' => 150];
 
         $this->assertEquals($b, $a->getEntityData());
     }
