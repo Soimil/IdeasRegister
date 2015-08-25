@@ -75,8 +75,11 @@ class AbstractEntity
             foreach ($properties as $property) {
 
                 if (isset($data[$property])) {
-                    if ($property == 'height') {
-                        $this->$property = $this->setHeight($data[$property]);
+
+                    $method = 'get' . $property;
+
+                    if (method_exists(__CLASS__, $method)) {
+                        $this->$method($data[$property]);
                     } else {
                         $this->$property = $data[$property];
                     }
@@ -86,11 +89,14 @@ class AbstractEntity
         }
     }
 
+    /**
+     * @param $height
+     * @return mixed
+     */
     public function setHeight($height)
     {
         if ($height <= 220) {
             return $height;
         }
     }
-
 }
