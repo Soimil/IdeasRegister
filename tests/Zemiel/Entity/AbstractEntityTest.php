@@ -39,13 +39,13 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
 
     public function testPushAndPop()
     {
-        $data = ['height' => 250];
+        $data = ['name' => 'Piotr', 'type' => 'men', 'color' => 'white', 'price' => 0, 'height' => 150];
 
         $a = new TestClass();
 
         $a->setEntityData($data);
 
-        $b = ['height' => 150];
+        $b = ['name' => 'Piotr', 'type' => 'men', 'color' => 'white', 'price' => 0, 'height' => 150];
 
         $this->assertEquals($b, $a->getEntityData());
     }
