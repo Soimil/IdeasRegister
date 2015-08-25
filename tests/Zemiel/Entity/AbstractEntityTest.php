@@ -16,6 +16,7 @@ class TestClass extends AbstractEntity
     protected $type;
     protected $color;
     protected $price;
+    protected $height;
 
     public function testOne()
     {

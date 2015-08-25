@@ -86,7 +86,7 @@ class AbstractEntity
         }
     }
 
-    public function setHeight(int $height)
+    public function setHeight($height)
     {
         if ($height <= 220) {
             return $height;
