@@ -76,7 +76,7 @@ class AbstractEntity
 
                 if (isset($data[$property])) {
 
-                    $method = 'get' . $property;
+                    $method = 'set' . $property;
 
                     if (method_exists(__CLASS__, $method)) {
                         $this->$method($data[$property]);
