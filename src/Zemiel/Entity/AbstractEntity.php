@@ -10,7 +10,6 @@ namespace Zemiel\Entity;
 
 class AbstractEntity
 {
-    private $entityData = [];
     private $entityProperties = [];
 
     /**
@@ -74,10 +73,24 @@ class AbstractEntity
 
         if ($data) {
             foreach ($properties as $property) {
+
                 if (isset($data[$property])) {
-                    $this->$property = $data[$property];
+                    if ($property == 'height') {
+                        $this->$property = $this->setHeight($data[$property]);
+                    } else {
+                        $this->$property = $data[$property];
+                    }
+
                 }
             }
         }
     }
+
+    public function setHeight(int $height)
+    {
+        if ($height <= 220) {
+            return $height;
+        }
+    }
+
 }
