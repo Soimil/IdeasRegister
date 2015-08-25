@@ -88,17 +88,4 @@ class AbstractEntity
             }
         }
     }
-
-    /**
-     * setting height value
-     *
-     * @param $height
-     * @return mixed
-     */
-    public function setHeight($height)
-    {
-        if ($height <= 220) {
-            return $height;
-        }
-    }
 }
