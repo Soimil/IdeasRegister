@@ -51,7 +51,7 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
     /**
      * @expectedException \Exception
      */
-    public function testException()
+    public function testExceptionPushWrongData()
     {
         $data = "test";
 
