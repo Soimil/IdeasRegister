@@ -78,7 +78,7 @@ class AbstractEntity
             foreach ($properties as $property) {
 
                 if (isset($data[$property])) {
-                    $method = 'set' . $property;
+                    $method = 'set' . ucfirst(strtolower($property));
                     if (in_array($method, $methods)) {
                         $this->$property = $this->$method($data[$property]);
                     } else {
