@@ -42,12 +42,10 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
         $data = ['name' => 'Piotr', 'type' => 'men', 'color' => 'white', 'price' => 0, 'height' => 350];
 
         $a = new TestClass();
-
         $a->setEntityData($data);
 
-        $b = ['name' => 'Piotr', 'type' => 'men', 'color' => 'white', 'price' => 0, 'height' => null];
-
-        $this->assertEquals($b, $a->getEntityData());
+        $data['height'] = null;
+        $this->assertEquals($data, $a->getEntityData());
     }
 
     /**
