@@ -79,7 +79,7 @@ class AbstractEntity
                     $method = 'set' . $property;
 
                     if (method_exists(__CLASS__, $method)) {
-                        $this->$method($data[$property]);
+                        $this->$property = $this->$method($data[$property]);
                     } else {
                         $this->$property = $data[$property];
                     }
@@ -90,6 +90,8 @@ class AbstractEntity
     }
 
     /**
+     * setting height value
+     *
      * @param $height
      * @return mixed
      */
