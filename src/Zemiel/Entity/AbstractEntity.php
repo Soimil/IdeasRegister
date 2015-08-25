@@ -84,15 +84,13 @@ class AbstractEntity
                 continue;
             }
 
-            $this->$property = $data[$property];
-
             $method = 'set' . ucfirst(strtolower($property));
 
-            if (!in_array($method, $methods)) {
+            if (in_array($method, $methods)) {
+                $this->$property = $this->$method($data[$property]);
                 continue;
             }
-            
-            $this->$property = $this->$method($data[$property]);
+            $this->$property = $data[$property];
         }
 
     }
