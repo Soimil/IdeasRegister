@@ -71,21 +71,23 @@ class AbstractEntity
     {
         $properties = $this->getProperties();
 
-        if ($data) {
+        if (!$data) {
+            return false;
+        }
 
-            $methods = get_class_methods(__CLASS__);
+        $methods = get_class_methods(__CLASS__);
 
-            foreach ($properties as $property) {
-                if (isset($data[$property])) {
+        foreach ($properties as $property) {
+            if (isset($data[$property])) {
 
-                    $this->$property = $data[$property];
+                $this->$property = $data[$property];
 
-                    $method = 'set' . ucfirst(strtolower($property));
-                    if (in_array($method, $methods)) {
-                        $this->$property = $this->$method($data[$property]);
-                    } 
+                $method = 'set' . ucfirst(strtolower($property));
+                if (in_array($method, $methods)) {
+                    $this->$property = $this->$method($data[$property]);
                 }
             }
         }
+
     }
 }
