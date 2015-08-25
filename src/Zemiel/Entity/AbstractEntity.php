@@ -79,16 +79,20 @@ class AbstractEntity
         $methods = get_class_methods(__CLASS__);
 
         foreach ($properties as $property) {
+
             if (!isset($data[$property])) {
                 continue;
             }
+
             $this->$property = $data[$property];
 
             $method = 'set' . ucfirst(strtolower($property));
-            if (in_array($method, $methods)) {
-                $this->$property = $this->$method($data[$property]);
-            }
 
+            if (!in_array($method, $methods)) {
+                continue;
+            }
+            
+            $this->$property = $this->$method($data[$property]);
         }
 
     }
