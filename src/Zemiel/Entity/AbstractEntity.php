@@ -79,7 +79,7 @@ class AbstractEntity
 
                 if (isset($data[$property])) {
                     $method = 'set' . $property;
-                    if (in_array($property, $methods)) {
+                    if (in_array($method, $methods)) {
                         $this->$property = $this->$method($data[$property]);
                     } else {
                         $this->$property = $data[$property];
