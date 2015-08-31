@@ -48,7 +48,7 @@ class IdeaEntity
     public function setTitle($title)
     {
         if (!(is_string($title)) || strlen($title) === 0) {
-            throw new \Exception('Must be string.');
+            throw new \Exception('Title must by string and can\'t by empty.');
         }
         $this->title = $title;
 
@@ -73,7 +73,7 @@ class IdeaEntity
     public function setContent($content)
     {
         if (!(is_string($content)) || strlen($content) === 0) {
-            throw new \Exception('Must be string.');
+            throw new \Exception('Content must be string and can\'t by empty.');
         }
         $this->content = $content;
 
@@ -98,7 +98,7 @@ class IdeaEntity
     public function setUserId($userId)
     {
         if (!(is_int($userId)) || $userId <= 0) {
-            throw new \Exception('Must be integer.');
+            throw new \Exception('User is must mi integer.');
         }
         $this->userId = $userId;
 
