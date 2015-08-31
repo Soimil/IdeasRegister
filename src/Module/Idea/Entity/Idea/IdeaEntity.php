@@ -20,7 +20,7 @@ class IdeaEntity
      *
      * @param $name
      */
-    public function setName($name)
+    public function setName(string $name)
     {
         $this->name = $name;
     }
@@ -40,7 +40,7 @@ class IdeaEntity
      *
      * @param $title
      */
-    public function setTitle($title)
+    public function setTitle(string $title)
     {
         $this->title = $title;
     }
@@ -60,7 +60,7 @@ class IdeaEntity
      *
      * @param $content
      */
-    public function setContent($content)
+    public function setContent(string $content)
     {
         $this->content = $content;
     }
@@ -80,7 +80,7 @@ class IdeaEntity
      *
      * @param $userId
      */
-    public function setUserId($userId)
+    public function setUserId(integer $userId)
     {
         $this->userId = $userId;
     }
