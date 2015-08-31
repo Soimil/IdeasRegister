@@ -16,7 +16,7 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
     {
         $ideaEntity = new IdeaEntity();
         
-        $ideaEntity->setName('Test');
+        $ideaEntity->setName(['test', 'name']);
         $ideaEntity->setContent('test content');
         $ideaEntity->setTitle('Title Idea');
         $ideaEntity->setUserId(5);
