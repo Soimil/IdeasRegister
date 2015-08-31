@@ -23,7 +23,7 @@ class IdeaEntity
      */
     public function setName($name)
     {
-        if (!(is_string($name))) {
+        if (empty($name) || !(is_string($name))) {
             throw new \Exception('Must be string.');
         }
         $this->name = $name;
