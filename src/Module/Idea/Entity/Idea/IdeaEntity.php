@@ -23,7 +23,7 @@ class IdeaEntity
      */
     public function setName($name)
     {
-        if (empty($name) || !(is_string($name))) {
+        if (strlen($name) === 0 || !(is_string($name))) {
             throw new \Exception('Must be string.');
         }
         $this->name = $name;
@@ -47,7 +47,7 @@ class IdeaEntity
      */
     public function setTitle($title)
     {
-        if (empty($title) || !(is_string($title))) {
+        if (strlen($title) === 0 || !(is_string($title))) {
             throw new \Exception('Must be string.');
         }
         $this->title = $title;
@@ -72,7 +72,7 @@ class IdeaEntity
      */
     public function setContent($content)
     {
-        if (empty($content) || !(is_string($content))) {
+        if (strlen($content) === 0 || !(is_string($content))) {
             throw new \Exception('Must be string.');
         }
         $this->content = $content;
@@ -97,7 +97,7 @@ class IdeaEntity
      */
     public function setUserId($userId)
     {
-        if (empty($userId) || !(is_int($userId))) {
+        if (strlen($userId) === 0 || !(is_int($userId))) {
             throw new \Exception('Must be integer.');
         }
         $this->userId = $userId;
