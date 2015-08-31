@@ -12,7 +12,7 @@ use Module\Idea\Entity\Idea\IdeaEntity;
 
 class IdeaEntityTest extends \PHPUnit_Framework_TestCase
 {
-    public function populateIdeaEntityTest()
+    public function testPopulateIdeaEntity()
     {
         $ideaEntity = new IdeaEntity();
         

@@ -20,9 +20,12 @@ class IdeaEntity
      *
      * @param $name
      */
-    public function setName(string $name)
+    public function setName($name)
     {
-        $this->name = $name;
+        if (is_string($name)) {
+            $this->name = $name;
+        }
+
     }
 
     /**
@@ -40,9 +43,12 @@ class IdeaEntity
      *
      * @param $title
      */
-    public function setTitle(string $title)
+    public function setTitle($title)
     {
-        $this->title = $title;
+        i f(is_string($title)) {
+            $this->title = $title;
+        }
+
     }
 
     /**
@@ -60,9 +66,12 @@ class IdeaEntity
      *
      * @param $content
      */
-    public function setContent(string $content)
+    public function setContent($content)
     {
-        $this->content = $content;
+        if (is_string($content)) {
+            $this->content = $content;
+        }
+
     }
 
     /**
@@ -80,9 +89,12 @@ class IdeaEntity
      *
      * @param $userId
      */
-    public function setUserId(integer $userId)
+    public function setUserId($userId)
     {
-        $this->userId = $userId;
+        if (is_int($userId)) {
+            $this->userId = $userId;
+        }
+
     }
 
     /**
