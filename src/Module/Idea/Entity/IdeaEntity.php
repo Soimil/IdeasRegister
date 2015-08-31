@@ -97,7 +97,7 @@ class IdeaEntity
      */
     public function setUserId($userId)
     {
-        if (!(is_int($userId)) || $userId <= 0) {
+        if (!(is_int($userId))) {
             throw new \InvalidArgumentException('User is must mi integer.');
         }
         $this->userId = $userId;
