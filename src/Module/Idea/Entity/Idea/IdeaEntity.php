@@ -45,7 +45,7 @@ class IdeaEntity
      */
     public function setTitle($title)
     {
-        i f(is_string($title)) {
+        if (is_string($title)) {
             $this->title = $title;
         }
 
