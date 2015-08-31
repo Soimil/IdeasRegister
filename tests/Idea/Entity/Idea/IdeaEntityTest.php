@@ -21,7 +21,7 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
         $ideaEntity->setTitle('Title Idea');
         $ideaEntity->setUserId(5);
 
-        $this->assertEquals('Test', $ideaEntity->gatName());
+        $this->assertEquals('Test', $ideaEntity->getName());
         $this->assertEquals('test content', $ideaEntity->getContent());
         $this->assertEquals('Title Idea', $ideaEntity->getTitle());
         $this->assertEquals(5, $ideaEntity->getUserId());

@@ -19,11 +19,14 @@ class IdeaEntity
      * setting Idea name
      *
      * @param $name
+     * @throws \Exception
      */
     public function setName($name)
     {
         if (is_string($name)) {
             $this->name = $name;
+        } else {
+            throw new \Exception('Must be string.');
         }
 
     }
@@ -33,7 +36,7 @@ class IdeaEntity
      *
      * @return mixed
      */
-    public function gatName()
+    public function getName()
     {
         return $this->name;
     }
@@ -42,11 +45,14 @@ class IdeaEntity
      * setting Idea title
      *
      * @param $title
+     * @throws \Exception
      */
     public function setTitle($title)
     {
         if (is_string($title)) {
             $this->title = $title;
+        } else {
+            throw new \Exception('Must be string.');
         }
 
     }
@@ -65,11 +71,14 @@ class IdeaEntity
      * setting Idea content
      *
      * @param $content
+     * @throws \Exception
      */
     public function setContent($content)
     {
         if (is_string($content)) {
             $this->content = $content;
+        } else {
+            throw new \Exception('Must be string.');
         }
 
     }
@@ -88,11 +97,14 @@ class IdeaEntity
      * setting Idea owner id
      *
      * @param $userId
+     * @throws \Exception
      */
     public function setUserId($userId)
     {
         if (is_int($userId)) {
             $this->userId = $userId;
+        } else {
+            throw new \Exception('Must be integer.');
         }
 
     }
