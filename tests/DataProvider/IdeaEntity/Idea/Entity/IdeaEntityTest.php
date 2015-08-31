@@ -6,9 +6,9 @@
  * Time: 19:52
  */
 
-namespace tests\Idea\Entity\Idea;
+namespace tests\DataProvider\Idea\Entity\Idea;
 
-use Module\Idea\Entity\Idea\IdeaEntity;
+use Module\Idea\Entity\IdeaEntity;
 
 class IdeaEntityTest extends \PHPUnit_Framework_TestCase
 {
