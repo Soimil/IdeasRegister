@@ -6,13 +6,13 @@
  * Time: 19:52
  */
 
-namespace tests\DataProvider\IdeaEntity\Idea\Entity;
+namespace tests\DataProvider\Idea\Entity;
 
 use Module\Idea\Entity\IdeaEntity;
 
 class IdeaEntityTest extends \PHPUnit_Framework_TestCase
 {
-    public function getValidStrings()
+    public static function getValidStrings()
     {
         return [
             [
