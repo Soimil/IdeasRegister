@@ -29,7 +29,7 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @dataProvider tests\DataProvider\Idea\Entity\IdeaEntityTest::getValidStrings
+     * @dataProvider Tests\DataProvider\Idea\Entity\IdeaEntityTest::getValidStrings
      */
     public function testValidStrings($name, $title, $content, $userId)
     {
@@ -47,7 +47,7 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @dataProvider tests\DataProvider\Idea\Entity\IdeaEntityTest::getInvalidString
+     * @dataProvider Tests\DataProvider\Idea\Entity\IdeaEntityTest::getInvalidString
      */
     public function testInvalidString($name, $title, $content, $userId)
     {

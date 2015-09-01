@@ -23,9 +23,14 @@ class IdeaEntity
      */
     public function setName($name)
     {
-        if (!(is_string($name)) || strlen($name) === 0) {
-            throw new \InvalidArgumentException('Must be string.');
+        if (!(is_string($name))) {
+            throw new \InvalidArgumentException('$name must be string.');
         }
+
+        if (strlen($name) === 0) {
+            throw new \InvalidArgumentException('$name can\'t by empty string.');
+        }
+
         $this->name = $name;
     }
 
@@ -47,8 +52,11 @@ class IdeaEntity
      */
     public function setTitle($title)
     {
-        if (!(is_string($title)) || strlen($title) === 0) {
-            throw new \InvalidArgumentException('Title must by string and can\'t by empty.');
+        if (!(is_string($title))) {
+            throw new \InvalidArgumentException('Title must by string.');
+        }
+        if (strlen($title) === 0) {
+            throw new \InvalidArgumentException('Title can\'t by empty string.');
         }
         $this->title = $title;
 
@@ -72,8 +80,12 @@ class IdeaEntity
      */
     public function setContent($content)
     {
-        if (!(is_string($content)) || strlen($content) === 0) {
-            throw new \InvalidArgumentException('Content must be string and can\'t by empty.');
+        if (!(is_string($content))) {
+            throw new \InvalidArgumentException('Content must be string.');
+        }
+
+        if (strlen($content) === 0) {
+            throw new \InvalidArgumentException('Content can\'t by empty string.');
         }
         $this->content = $content;
 
