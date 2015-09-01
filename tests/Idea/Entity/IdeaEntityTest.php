@@ -17,7 +17,7 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
         $ideaEntity = new IdeaEntity();
         
         $ideaEntity->setName('Test');
-        $ideaEntity->setContent('');
+        $ideaEntity->setContent('ttt');
         $ideaEntity->setTitle('Title Idea');
         $ideaEntity->setUserId(5);
 
@@ -26,5 +26,41 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('Title Idea', $ideaEntity->getTitle());
         $this->assertEquals(5, $ideaEntity->getUserId());
 
+    }
+
+    /**
+     * @dataProvider tests\DataProvider\IdeaEntity\Idea\Entity\IdeaEntityTest::getValidStrings
+     */
+    public function testValidStrings($name, $title, $content, $userId)
+    {
+        $ideaEntity = new IdeaEntity();
+
+        $ideaEntity->setName($name);
+        $ideaEntity->setTitle($title);
+        $ideaEntity->setContent($content);
+        $ideaEntity->setUserId($userId);
+
+        $this->assertEquals($name, $ideaEntity->getName());
+        $this->assertEquals($title, $ideaEntity->getTitle());
+        $this->assertEquals($content, $ideaEntity->getContent());
+        $this->assertEquals($userId, $ideaEntity->getUserId());
+    }
+
+    /**
+     * @dataProvider tests\DataProvider\IdeaEntity\Idea\Entity\IdeaEntityTest::getInvalidString
+     */
+    public function testInvalidString($name, $title, $content, $userId)
+    {
+        $ideaEntity = new IdeaEntity();
+
+        $ideaEntity->setName($name);
+        $ideaEntity->setTitle($title);
+        $ideaEntity->setContent($content);
+        $ideaEntity->setUserId($userId);
+
+        $this->assertEquals($name, $ideaEntity->getName());
+        $this->assertEquals($title, $ideaEntity->getTitle());
+        $this->assertEquals($content, $ideaEntity->getContent());
+        $this->assertEquals($userId, $ideaEntity->getUserId());
     }
 }

@@ -6,7 +6,7 @@
  * Time: 19:52
  */
 
-namespace tests\DataProvider\Idea\Entity\Idea;
+namespace tests\DataProvider\IdeaEntity\Idea\Entity;
 
 use Module\Idea\Entity\IdeaEntity;
 
@@ -30,30 +30,21 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
-    /**
-     * @dataProvider getValidStrings
-     */
-
-    public function testValidStrings($name, $title, $content, $userId)
-    {
-        $ideaEntity = new IdeaEntity();
-
-        $ideaEntity->setName($name);
-        $ideaEntity->setTitle($title);
-        $ideaEntity->setContent($content);
-        $ideaEntity->setUserId($userId);
-
-        $this->assertEquals($name, $ideaEntity->getName());
-        $this->assertEquals($title, $ideaEntity->getTitle());
-        $this->assertEquals($content, $ideaEntity->getContent());
-        $this->assertEquals($userId, $ideaEntity->getUserId());
-    }
-
-    /**
-     * @dataProvider getValidStrings
-     */
     public function getInvalidString()
     {
-
+        return [
+            [
+                '', '', '', 0
+            ],
+            [
+                null, null, null, null
+            ],
+            [
+                new IdeaEntity(), new IdeaEntity(), new IdeaEntity(), new IdeaEntity()
+            ],
+            [
+                [1, 2, 3], [5, 6, 7], [8, 9, 0], [1, 2]
+            ],
+        ];
     }
 }
