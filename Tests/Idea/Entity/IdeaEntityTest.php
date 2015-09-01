@@ -6,7 +6,7 @@
  * Time: 19:52
  */
 
-namespace tests\Idea\Entity;
+namespace Tests\Idea\Entity;
 
 use Module\Idea\Entity\IdeaEntity;
 
