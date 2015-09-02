@@ -21,20 +21,17 @@ class UserEntity
      */
     public function setFirstName($firstName)
     {
-        if (!(is_string($firstName))) {
-            throw new \InvalidArgumentException('$firstName must be string.');
+        if (!(is_string($firstName)) || strlen($firstName) === 0) {
+            throw new \InvalidArgumentException('$firstName must be string and can\'t by empty string.');
         }
 
-        if (strlen($firstName) === 0) {
-            throw new \InvalidArgumentException('$firstName can\'t by empty string.');
-        }
         $this->firstName = $firstName;
     }
 
     /**
      * getting User first name
      *
-     * @return mixed
+     * @return null|string
      */
     public function getFirstName()
     {
@@ -48,20 +45,17 @@ class UserEntity
      */
     public function setLastName($lastName)
     {
-        if (!(is_string($lastName))) {
-            throw new \InvalidArgumentException('$lastName must be string.');
+        if (!(is_string($lastName)) || strlen($lastName) === 0) {
+            throw new \InvalidArgumentException('$lastName must be string and can\'t by empty string.');
         }
 
-        if (strlen($lastName) === 0) {
-            throw new \InvalidArgumentException('$lastName can\'t by empty string.');
-        }
         $this->firstName = $lastName;
     }
 
     /**
      * getting User last name
      *
-     * @return mixed
+     * @return null|string
      */
     public function getLastName()
     {
@@ -71,7 +65,7 @@ class UserEntity
     /**
      * getting User full name
      *
-     * @return string
+     * @return null|string
      */
     public function getFullName()
     {
@@ -94,7 +88,7 @@ class UserEntity
     /**
      * getting User type
      *
-     * @return mixed
+     * @return null|string
      */
     public function getType()
     {
