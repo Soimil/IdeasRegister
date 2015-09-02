@@ -15,7 +15,7 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
     public function testPopulateIdeaEntity()
     {
         $ideaEntity = new IdeaEntity();
-        
+
         $ideaEntity->setName('Test');
         $ideaEntity->setContent('ttt');
         $ideaEntity->setTitle('Title Idea');
@@ -71,5 +71,10 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
     {
         $ideaEntity = new IdeaEntity();
         $ideaEntity->setName($name)->setTitle($title)->setContent($content)->setUserId($userId);
+
+        $this->assertEquals($name, $ideaEntity->getName());
+        $this->assertEquals($title, $ideaEntity->getTitle());
+        $this->assertEquals($content, $ideaEntity->getContent());
+        $this->assertEquals($userId, $ideaEntity->getUserId());
     }
 }
