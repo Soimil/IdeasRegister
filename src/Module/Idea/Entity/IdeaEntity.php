@@ -18,7 +18,7 @@ class IdeaEntity
     /**
      * setting Idea name
      *
-     * @param $name
+     * @param string $name
      * @throws \Exception
      */
     public function setName($name)
@@ -47,7 +47,7 @@ class IdeaEntity
     /**
      * setting Idea title
      *
-     * @param $title
+     * @param string $title
      * @throws \Exception
      */
     public function setTitle($title)
@@ -75,7 +75,7 @@ class IdeaEntity
     /**
      * setting Idea content
      *
-     * @param $content
+     * @param string $content
      * @throws \Exception
      */
     public function setContent($content)
@@ -104,7 +104,7 @@ class IdeaEntity
     /**
      * setting Idea owner id
      *
-     * @param $userId
+     * @param integer $userId
      * @throws \Exception
      */
     public function setUserId($userId)

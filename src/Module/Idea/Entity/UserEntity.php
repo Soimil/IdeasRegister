@@ -17,7 +17,7 @@ class UserEntity
     /**
      * setting User first name
      *
-     * @param $firstName
+     * @param string $firstName
      */
     public function setFirstName($firstName)
     {
@@ -44,7 +44,7 @@ class UserEntity
     /**
      * setting User last name
      *
-     * @param $lastName
+     * @param string $lastName
      */
     public function setLastName($lastName)
     {
@@ -81,7 +81,7 @@ class UserEntity
     /**
      * setting User type
      *
-     * @param $type
+     * @param string $type
      */
     public function setType($type)
     {
