@@ -8,7 +8,7 @@
  */
 namespace Zemiel\Entity;
 
-class AbstractEntity
+abstract class AbstractEntity
 {
     private $entityProperties = [];
 
