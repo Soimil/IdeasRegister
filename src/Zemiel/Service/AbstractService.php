@@ -6,7 +6,7 @@
  * Time: 10:26 PM
  */
 
-namespace Module\Service;
+namespace Zemiel\Module\Service;
 
 
 abstract class AbstractService
@@ -54,6 +54,7 @@ abstract class AbstractService
 
     /**
      * setting mapper
+     *
      * @param $mapper
      */
     public function setMapper($mapper)

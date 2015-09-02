@@ -8,7 +8,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "Zemiel\\": "src/Zemiel/"
+            "Zemiel\\": "src/Zemiel/",
+            "Module\\": "src/Module/",
+            "Tests\\": "tests/"
         }
     },
     "require-dev": {
