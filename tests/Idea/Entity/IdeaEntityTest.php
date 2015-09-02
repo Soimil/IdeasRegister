@@ -70,7 +70,10 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
     public function testFluent($name, $title, $content, $userId)
     {
         $ideaEntity = new IdeaEntity();
-        $ideaEntity->setName($name)->setTitle($title)->setContent($content)->setUserId($userId);
+        $ideaEntity->setName($name)
+            ->setTitle($title)
+            ->setContent($content)
+            ->setUserId($userId);
 
         $this->assertEquals($name, $ideaEntity->getName());
         $this->assertEquals($title, $ideaEntity->getTitle());
