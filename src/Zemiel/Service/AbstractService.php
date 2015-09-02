@@ -12,54 +12,25 @@ namespace Zemiel\Module\Service;
 abstract class AbstractService
 {
     protected $name;
-    protected $mapper;
+    protected $currentMapper;
 
     /**
      * construct
      *
-     * @param null $name
      */
-    public function __construct($name = null)
+    public function __construct()
     {
-        if($name) {
-            $this->setMapperName($name);
-        }
-    }
 
-    /**
-     * setting mapper name
-     *
-     * @param $name
-     * @return $this
-     */
-    public function setMapperName($name)
-    {
-        if (!(is_string($name)) || strlen($name) === 0) {
-            throw new \InvalidArgumentException('Mapper $name must be string and can\'t by empty.');
-        }
-
-        $this->name = $name;
-        return $this;
-    }
-
-    /**
-     * getting mapper name
-     *
-     * @return null|string
-     */
-    public function getMapperName()
-    {
-        return $this->name;
     }
 
     /**
      * setting mapper
      *
-     * @param $mapper
+     * @param $currentMapper
      */
-    public function setMapper($mapper)
+    public function setCurrentMapper($currentMapper)
     {
-        $this->mapper = $mapper;
+        $this->mapper = $currentMapper;
     }
 
     /**
@@ -67,8 +38,8 @@ abstract class AbstractService
      *
      * @return null|object
      */
-    public function getMapper()
+    public function getCurrentMapper()
     {
-        return $this->mapper;
+        return $this->currentMapper;
     }
 }
