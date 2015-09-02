@@ -19,6 +19,7 @@ class IdeaEntity
      * setting Idea name
      *
      * @param string $name
+     * @return $this
      * @throws \Exception
      */
     public function setName($name)
@@ -28,6 +29,7 @@ class IdeaEntity
         }
 
         $this->name = $name;
+        return $this;
     }
 
     /**
@@ -44,6 +46,7 @@ class IdeaEntity
      * setting Idea title
      *
      * @param string $title
+     * @return $this
      * @throws \Exception
      */
     public function setTitle($title)
@@ -53,7 +56,7 @@ class IdeaEntity
         }
 
         $this->title = $title;
-
+        return $this;
     }
 
     /**
@@ -70,6 +73,7 @@ class IdeaEntity
      * setting Idea content
      *
      * @param string $content
+     * @return $this
      * @throws \Exception
      */
     public function setContent($content)
@@ -79,7 +83,7 @@ class IdeaEntity
         }
 
         $this->content = $content;
-
+        return $this;
     }
 
     /**
@@ -96,6 +100,7 @@ class IdeaEntity
      * setting Idea owner id
      *
      * @param integer $userId
+     * @return $this
      * @throws \Exception
      */
     public function setUserId($userId)
@@ -104,7 +109,7 @@ class IdeaEntity
             throw new \InvalidArgumentException('User is must mi integer.');
         }
         $this->userId = $userId;
-
+        return $this;
     }
 
     /**

@@ -18,6 +18,7 @@ class UserEntity
      * setting User first name
      *
      * @param string $firstName
+     * @return $this
      */
     public function setFirstName($firstName)
     {
@@ -26,6 +27,7 @@ class UserEntity
         }
 
         $this->firstName = $firstName;
+        return $this;
     }
 
     /**
@@ -42,6 +44,7 @@ class UserEntity
      * setting User last name
      *
      * @param string $lastName
+     * @return $this
      */
     public function setLastName($lastName)
     {
@@ -50,6 +53,7 @@ class UserEntity
         }
 
         $this->firstName = $lastName;
+        return $this;
     }
 
     /**
@@ -76,6 +80,7 @@ class UserEntity
      * setting User type
      *
      * @param string $type
+     * @return $this
      */
     public function setType($type)
     {
@@ -83,6 +88,7 @@ class UserEntity
             throw new \InvalidArgumentException('$type can\'t by only user or admin.');
         }
         $this->type = $type;
+        return $this;
     }
 
     /**
