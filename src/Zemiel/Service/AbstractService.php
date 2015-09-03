@@ -27,11 +27,12 @@ abstract class AbstractService
     /**
      * setting mapper
      *
-     * @param $currentMapper
+     * @param $mapperName
+     * @internal param $currentMapper
      */
-    public function setCurrentMapper($currentMapper)
+    public function setCurrentMapper($mapperName)
     {
-        $this->mapper = $currentMapper;
+       $this->currentMapper = $this->mappers[$mapperName];
     }
 
     /**
