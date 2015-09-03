@@ -13,6 +13,7 @@ abstract class AbstractService
 {
     protected $name;
     protected $currentMapper;
+    protected $mappers = [];
 
     /**
      * construct
@@ -42,4 +43,11 @@ abstract class AbstractService
     {
         return $this->currentMapper;
     }
+
+    public function addMapper($mapper)
+    {
+        $this->mappers[$mapper->getName()] = $mapper;
+    }
+
+
 }
