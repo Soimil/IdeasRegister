@@ -27,7 +27,7 @@ abstract class AbstractService
     /**
      * setting mapper
      *
-     * @param $mapperName
+     * @param string $mapperName
      * @internal param $currentMapper
      */
     public function setCurrentMapper($mapperName)
@@ -48,6 +48,11 @@ abstract class AbstractService
         return $this->currentMapper;
     }
 
+    /**
+     * agging mapper object to mappers
+     *
+     * @param object $mapper
+     */
     public function addMapper($mapper)
     {
         if (!is_object($mapper)) {
