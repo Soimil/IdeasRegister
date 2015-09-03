@@ -52,7 +52,7 @@ class IdeaService extends AbstractService
 
     /**
      * update Idea object
-     * 
+     *
      * @param object $idea
      */
     public function update($idea)

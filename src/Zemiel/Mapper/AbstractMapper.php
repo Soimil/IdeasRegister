@@ -13,6 +13,22 @@ abstract class AbstractMapper
     protected $name;
 
     /**
+     * setting Mapper name
+     * 
+     * @param string $name
+     * @return $this
+     */
+    public function setName($name)
+    {
+        if (!(is_string($name)) || strlen($name) === 0) {
+            throw new \InvalidArgumentException('Mapper name can\'t by empty and must be string.');
+        }
+
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
      * getting mapper name
      *
      * @return string
