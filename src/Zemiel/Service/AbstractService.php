@@ -32,7 +32,10 @@ abstract class AbstractService
      */
     public function setCurrentMapper($mapperName)
     {
-       $this->currentMapper = $this->mappers[$mapperName];
+        if (!(is_string($mapperName)) || strlen($mapperName) === 0) {
+            throw new \InvalidArgumentException('Mapper name can\'t by empty and must by string.');
+        }
+        $this->currentMapper = $this->mappers[$mapperName];
     }
 
     /**
@@ -47,6 +50,9 @@ abstract class AbstractService
 
     public function addMapper($mapper)
     {
+        if (!is_object($mapper)) {
+            throw new \InvalidArgumentException('Mapper can\'t by empty and must by mapper object.');
+        }
         $this->mappers[$mapper->getName()] = $mapper;
     }
 
