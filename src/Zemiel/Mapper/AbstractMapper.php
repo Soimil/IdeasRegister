@@ -14,7 +14,7 @@ abstract class AbstractMapper
 
     /**
      * setting Mapper name
-     * 
+     *
      * @param string $name
      * @return $this
      */
@@ -35,6 +35,9 @@ abstract class AbstractMapper
      */
     public function getName()
     {
+        if (!$this->name) {
+            $this->name;
+        }
         return $this->name;
     }
 }
