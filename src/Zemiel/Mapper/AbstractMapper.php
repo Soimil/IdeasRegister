@@ -36,7 +36,7 @@ abstract class AbstractMapper
     public function getName()
     {
         if (!$this->name) {
-            $this->name;
+            return get_class($this);
         }
         return $this->name;
     }
