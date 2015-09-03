@@ -8,7 +8,6 @@
 
 namespace Zemiel\Mapper;
 
-
 abstract class AbstractMapper
 {
     protected $name;
