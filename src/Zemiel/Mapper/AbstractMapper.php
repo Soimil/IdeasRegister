@@ -15,7 +15,7 @@ abstract class AbstractMapper
 
     /**
      * getting mapper name
-     * 
+     *
      * @return string
      */
     public function getName()
