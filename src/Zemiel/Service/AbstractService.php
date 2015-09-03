@@ -8,7 +8,6 @@
 
 namespace Zemiel\Module\Service;
 
-
 abstract class AbstractService
 {
     protected $name;
@@ -60,6 +59,5 @@ abstract class AbstractService
         }
         $this->mappers[$mapper->getName()] = $mapper;
     }
-
 
 }
