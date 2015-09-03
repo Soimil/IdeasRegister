@@ -6,7 +6,7 @@
  * Time: 11:26 PM
  */
 
-namespace src\Module\Idea\Entity;
+namespace Module\User\Entity;
 
 class UserEntity
 {
