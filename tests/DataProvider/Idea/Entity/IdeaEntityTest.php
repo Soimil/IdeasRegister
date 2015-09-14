@@ -8,8 +8,6 @@
 
 namespace Tests\DataProvider\Idea\Entity;
 
-use Module\Idea\Entity\IdeaEntity;
-
 class IdeaEntityTest
 {
     public static function getValidStrings()
@@ -30,7 +28,7 @@ class IdeaEntityTest
         ];
     }
 
-    public function getInvalidString()
+    public static function getInvalidString()
     {
         return [
             [

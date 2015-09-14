@@ -6,10 +6,39 @@
  * Time: 8:27 PM
  */
 
-namespace tests\Zemiel\Mapper;
+namespace Tests\Zemiel\Mapper;
 
+use Zemiel\Mapper\AbstractMapper;
 
-class AbstractMapperTest
+class MapperTest extends AbstractMapper
 {
 
+}
+
+class AbstractMapperTest extends \PHPUnit_Framework_TestCase
+{
+    /**
+     * @dataProvider Tests\DataProvider\Zemiel\Mapper\AbstractMapperTest::getValidStrings
+     */
+    public function testValidStrings($name)
+    {
+        $mapper = new MapperTest();
+
+        $mapper->setName($name);
+
+        $this->assertEquals($name, $mapper->getName());
+
+    }
+
+    /**
+     * @dataProvider Tests\DataProvider\Zemiel\Mapper\AbstractMapperTest::getInvalidString
+     */
+    public function testInvalidString($name)
+    {
+        $mapper = new MapperTest();
+
+        $mapper->setName($name);
+
+        $this->assertEquals($name, $mapper->getName());
+    }
 }
