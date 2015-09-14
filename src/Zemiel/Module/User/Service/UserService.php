@@ -8,10 +8,22 @@
 
 namespace Zemiel\Module\User\Service;
 
-use Zemiel\Module\Service\AbstractService;
+use Zemiel\Service\AbstractService;
 
 class UserService extends AbstractService
 {
+    const SERVICE_NAME = 'UserService';
+
+    /**
+     * getting service name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return self::SERVICE_NAME;
+    }
+
     /**
      * getting User object by id
      *
@@ -69,15 +81,4 @@ class UserService extends AbstractService
     {
 
     }
-
-    /**
-     * getting full name current User
-     *
-     * @return string
-     */
-    public function getFullName()
-    {
-        return $this->firstName . ' ' . $this->lastname;
-    }
-
 }

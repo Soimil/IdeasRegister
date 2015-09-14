@@ -6,7 +6,7 @@
  * Time: 10:26 PM
  */
 
-namespace Zemiel\Module\Service;
+namespace Zemiel\Service;
 
 abstract class AbstractService
 {
@@ -24,17 +24,27 @@ abstract class AbstractService
     }
 
     /**
-     * setting mapper
+     * setting current mapper
      *
      * @param string $mapperName
      * @internal param $currentMapper
      */
     public function setCurrentMapper($mapperName)
     {
-        if (!(is_string($mapperName)) || strlen($mapperName) === 0) {
+        if (!(is_string($mapperName)) || preg_match('/\s/', $mapperName) > 0 || strlen($mapperName) === 0) {
             throw new \InvalidArgumentException('Mapper name can\'t by empty and must by string.');
         }
-        $this->currentMapper = $this->mappers[$mapperName];
+
+        if (!$this->mappers) {
+            throw new \InvalidArgumentException('There is no set yet any mappers');
+        }
+
+        foreach ($this->mappers as $mapper) {
+            if ($mapper->getName() == $mapperName) {
+                $this->currentMapper = $mapper;
+            }
+        }
+
     }
 
     /**
@@ -58,6 +68,25 @@ abstract class AbstractService
             throw new \InvalidArgumentException('Mapper can\'t by empty and must by mapper object.');
         }
         $this->mappers[$mapper->getName()] = $mapper;
+    }
+
+    /**
+     * getting names all setting mappers
+     *
+     * @return string
+     */
+    public function getMappersSetNames()
+    {
+        if (!$this->mappers) {
+            throw new \InvalidArgumentException('There is no set yet any mappers');
+        }
+
+        $names = '';
+        foreach ($this->mappers as $mapper) {
+            $names .= $mapper->getName() . ', ';
+        }
+
+        return substr($names, 0, -2);
     }
 
 }

@@ -17,6 +17,11 @@ class MapperTest extends AbstractMapper
 
 class AbstractMapperTest extends \PHPUnit_Framework_TestCase
 {
+    public function testAbstractClass()
+    {
+
+    }
+
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Mapper\AbstractMapperTest::getValidStrings
      */

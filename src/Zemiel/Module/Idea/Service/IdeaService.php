@@ -8,10 +8,22 @@
 
 namespace Zemiel\Module\Idea\Service;
 
-use Zemiel\Module\Service\AbstractService;
+use Zemiel\Service\AbstractService;
 
 class IdeaService extends AbstractService
 {
+    const SERVICE_NAME = 'IdeaService';
+
+    /**
+     * getting service name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return self::SERVICE_NAME;
+    }
+
     /**
      * getting Idea by id
      *
