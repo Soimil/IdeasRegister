@@ -17,7 +17,8 @@ php:
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
   - composer install
-  - phpunit/phpunit/phpunit tests/Zemiel/Mapper/AbstractMapperTest.php
+  - cd tests/
+  - php ../vendor/phpunit/phpunit/phpunit Zemiel/Mapper/AbstractMapperTest.php
 
 
 # omitting "script:" will default to phpunit
