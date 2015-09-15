@@ -16,7 +16,7 @@ php:
 
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
-  - composer install
+ # - composer install
 
 
 # omitting "script:" will default to phpunit
