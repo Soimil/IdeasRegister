@@ -7,4 +7,4 @@ if (function_exists('date_default_timezone_set') && function_exists('date_defaul
 
 chdir(dirname(__DIR__));
 
-require __DIR__ . '../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
