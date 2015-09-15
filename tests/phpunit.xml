@@ -12,8 +12,8 @@
          bootstrap="./bootstrap.php"
 >
     <testsuites>
-        <testsuite name="Full Composer Test Suite">
-            <directory>./Composer/</directory>
+        <testsuite name="Full IdeasRegister Test Suite">
+            <directory>./Zemiel/</directory>
         </testsuite>
     </testsuites>
 
