@@ -28,6 +28,7 @@ abstract class AbstractService
      *
      * @param string $mapperName
      * @internal param $currentMapper
+     * @return
      */
     public function setCurrentMapper($mapperName)
     {
@@ -40,7 +41,7 @@ abstract class AbstractService
         }
 
         if (array_key_exists($mapperName, $this->mappers)) {
-            return $this->mappers[$mapperName];
+            $this->currentMapper = $this->mappers[$mapperName];
         }
 
     }
