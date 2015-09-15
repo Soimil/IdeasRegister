@@ -39,10 +39,8 @@ abstract class AbstractService
             throw new \InvalidArgumentException('There is no set yet any mappers');
         }
 
-        foreach ($this->mappers as $mapper) {
-            if ($mapper->getName() == $mapperName) {
-                $this->currentMapper = $mapper;
-            }
+        if (array_key_exists($mapperName, $this->mappers)) {
+            return $this->mappers[$mapperName];
         }
 
     }
