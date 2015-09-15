@@ -8,6 +8,8 @@
 
 namespace Tests\DataProvider\Idea\Entity;
 
+use Module\Idea\Entity\IdeaEntity;
+
 class IdeaEntityTest
 {
     public static function getValidStrings()
