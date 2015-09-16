@@ -13,7 +13,7 @@
 >
     <testsuites>
         <testsuite name="Full IdeasRegister Test Suite">
-            <directory>./DataProvider/</directory>
+            <directory>./../test/</directory>
         </testsuite>
     </testsuites>
 
