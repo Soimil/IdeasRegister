@@ -40,7 +40,7 @@ class IdeaEntityTest
                 null, null, null, null
             ],
             [
-                new IdeaEntity(), new IdeaEntity(), new IdeaEntity(), new IdeaEntity()
+//                new IdeaEntity(), new IdeaEntity(), new IdeaEntity(), new IdeaEntity()
             ],
             [
                 [1, 2, 3], [5, 6, 7], [8, 9, 0], [1, 2]
