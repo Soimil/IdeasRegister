@@ -5,6 +5,6 @@ if (function_exists('date_default_timezone_set') && function_exists('date_defaul
     date_default_timezone_set(@date_default_timezone_get());
 }
 
-//chdir(dirname(__DIR__));
+chdir((__DIR__));
 
-require realpath('/../vendor/autoload.php');
+require __DIR__ . '/../vendor/autoload.php';
