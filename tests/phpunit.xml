@@ -13,7 +13,7 @@
 >
     <testsuites>
         <testsuite name="Full IdeasRegister Test Suite">
-            <directory>./../test/</directory>
+            <directory>./Zemiel/</directory>
         </testsuite>
     </testsuites>
 
