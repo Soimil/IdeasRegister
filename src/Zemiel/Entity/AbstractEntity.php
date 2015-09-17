@@ -19,9 +19,10 @@ abstract class AbstractEntity
      */
     public function __construct(array $data = null)
     {
-        if ($data) {
-            $this->setEntityData($data);
+        if (!$data || !is_array($data)) {
+            throw new \InvalidArgumentException('Data name can\'t by string, must by array.');
         }
+        $this->setEntityData($data);
 
     }
 

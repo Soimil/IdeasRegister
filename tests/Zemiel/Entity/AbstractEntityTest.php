@@ -57,5 +57,6 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
 
         $entity = new TestClass($data);
 
+        $this->assertEquals($data, $entity->getEntityData());
     }
 }
