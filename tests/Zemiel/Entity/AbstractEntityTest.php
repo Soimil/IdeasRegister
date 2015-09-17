@@ -49,7 +49,8 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException InvalidArgumentException
+     * @expectedException PHPUnit_Framework_Error
+     * @expectedExceptionMessage  __construct() must be of the type array, string given
      */
     public function testExceptionPushWrongData()
     {
