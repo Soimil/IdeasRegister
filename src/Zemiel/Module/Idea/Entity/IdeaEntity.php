@@ -8,7 +8,9 @@
 
 namespace Zemiel\Module\Idea\Entity;
 
-class IdeaEntity
+use Zemiel\Entity\AbstractEntity;
+
+class IdeaEntity extends AbstractEntity
 {
     protected $name;
     protected $title;

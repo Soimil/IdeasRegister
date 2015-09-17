@@ -8,7 +8,9 @@
 
 namespace Module\User\Entity;
 
-class UserEntity
+use Zemiel\Entity\AbstractEntity;
+
+class UserEntity extends AbstractEntity
 {
     protected $firstName;
     protected $lastName;
