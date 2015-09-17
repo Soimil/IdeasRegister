@@ -39,6 +39,7 @@ class AbstractMapperTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Mapper\AbstractMapperTest::getInvalidString
+     * @expectedException InvalidArgumentException
      */
     public function testInvalidString($name)
     {
