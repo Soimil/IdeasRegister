@@ -31,7 +31,9 @@ class AbstractMapperTest extends \PHPUnit_Framework_TestCase
 
         $mapper->setName($name);
 
-        $this->assertEquals($name, $mapper->getName());
+        $mapperName = $mapper->getName();
+
+        $this->assertEquals($name, $mapperName);
 
     }
 
@@ -44,6 +46,8 @@ class AbstractMapperTest extends \PHPUnit_Framework_TestCase
 
         $mapper->setName($name);
 
-        $this->assertEquals($name, $mapper->getName());
+        $mapperName = $mapper->getName();
+
+        $this->assertEquals($name, $mapperName);
     }
 }
