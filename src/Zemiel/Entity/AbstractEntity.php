@@ -17,13 +17,11 @@ abstract class AbstractEntity
      *
      * @param array $data
      */
-    public function __construct($data = null)
+    public function __construct(array $data = null)
     {
-        if (!$data || !is_array($data)) {
-            throw new \InvalidArgumentException('Data name can\'t by string, must by array.');
+        if ($data) {
+            $this->setEntityData($data);
         }
-        $this->setEntityData($data);
-
     }
 
     /**
