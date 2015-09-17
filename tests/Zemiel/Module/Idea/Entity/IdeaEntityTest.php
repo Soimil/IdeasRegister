@@ -8,7 +8,7 @@
 
 namespace Tests\Idea\Entity;
 
-use Module\Idea\Entity\IdeaEntity;
+use Zemiel\Module\Idea\Entity\IdeaEntity;
 
 class IdeaEntityTest extends \PHPUnit_Framework_TestCase
 {
