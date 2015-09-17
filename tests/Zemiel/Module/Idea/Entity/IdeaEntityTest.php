@@ -46,7 +46,7 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider Tests\DataProvider\Idea\Entity\IdeaEntityTest::getInvalidString
-     * @expectedException "Must be correct value"
+     * @expectedException InvalidArgumentException
      */
     public function testInvalidString($name, $title, $content, $userId)
     {

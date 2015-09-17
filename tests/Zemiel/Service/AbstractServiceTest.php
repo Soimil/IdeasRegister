@@ -40,7 +40,7 @@ class AbstractServiceTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Service\AbstractServiceTest::getInvalidString
-     * @expectedException "Bad mapper object"
+     * @expectedException InvalidArgumentException
      */
     public function testInvalidString($mapper)
     {

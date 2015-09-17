@@ -49,7 +49,7 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Exception
+     * @expectedException InvalidArgumentException
      */
     public function testExceptionPushWrongData()
     {
