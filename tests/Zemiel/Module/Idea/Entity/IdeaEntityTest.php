@@ -12,19 +12,17 @@ use Zemiel\Module\Idea\Entity\IdeaEntity;
 
 class IdeaEntityTest extends \PHPUnit_Framework_TestCase
 {
-    public function testPopulateIdeaEntity()
+    /**
+     * @dataProvider Tests\DataProvider\Idea\Entity\IdeaEntityTest::getValidArray
+     */
+    public function testPopulateIdeaEntity($array)
     {
-        $ideaEntity = new IdeaEntity();
+        $ideaEntity = new IdeaEntity($array);
 
-        $ideaEntity->setName('Test');
-        $ideaEntity->setContent('ttt');
-        $ideaEntity->setTitle('Title Idea');
-        $ideaEntity->setUserId(5);
-
-        $this->assertEquals('Test', $ideaEntity->getName());
-        $this->assertEquals('test content', $ideaEntity->getContent());
-        $this->assertEquals('Title Idea', $ideaEntity->getTitle());
-        $this->assertEquals(5, $ideaEntity->getUserId());
+        $this->assertEquals($array['name'], $ideaEntity->getName());
+        $this->assertEquals($array['content'], $ideaEntity->getContent());
+        $this->assertEquals($array['title'], $ideaEntity->getTitle());
+        $this->assertEquals($array['userId'], $ideaEntity->getUserId());
 
     }
 
@@ -48,6 +46,7 @@ class IdeaEntityTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider Tests\DataProvider\Idea\Entity\IdeaEntityTest::getInvalidString
+     * @expectedException "Must be correct value"
      */
     public function testInvalidString($name, $title, $content, $userId)
     {

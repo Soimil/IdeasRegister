@@ -47,4 +47,14 @@ class IdeaEntityTest
             ],
         ];
     }
+
+    public static function getValidArray()
+    {
+        return [
+            'name' => 'Idea',
+            'title' => 'My Idea',
+            'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            'userId' => '1'
+        ];
+    }
 }
