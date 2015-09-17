@@ -6,7 +6,7 @@
  * Time: 8:30 PM
  */
 
-namespace tests\Zemiel\Module\User\Service;
+namespace Tests\Zemiel\Module\User\Service;
 
 use Zemiel\Service\AbstractService;
 

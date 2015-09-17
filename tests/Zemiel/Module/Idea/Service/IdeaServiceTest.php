@@ -6,7 +6,7 @@
  * Time: 8:29 PM
  */
 
-namespace tests\Zemiel\Module\Idea\Service;
+namespace Tests\Zemiel\Module\Idea\Service;
 
 use Zemiel\Service\AbstractService;
 

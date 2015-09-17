@@ -6,7 +6,7 @@
  * Time: 11:26 PM
  */
 
-namespace Module\User\Entity;
+namespace Zemiel\Module\User\Entity;
 
 use Zemiel\Entity\AbstractEntity;
 

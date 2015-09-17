@@ -6,7 +6,7 @@
  * Time: 19:52
  */
 
-namespace Tests\Idea\Entity;
+namespace Tests\Zemiel\Module\Idea\Entity;
 
 use Zemiel\Module\Idea\Entity\IdeaEntity;
 
