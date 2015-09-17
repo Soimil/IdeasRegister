@@ -8,7 +8,7 @@
 
 namespace tests\Zemiel\Module\Idea\Service;
 
-use Zemiel\Module\Service\AbstractService;
+use Zemiel\Service\AbstractService;
 
 class TestIdea extends AbstractService
 {
