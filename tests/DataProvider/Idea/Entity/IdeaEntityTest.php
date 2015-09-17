@@ -8,7 +8,7 @@
 
 namespace Tests\DataProvider\Idea\Entity;
 
-use Module\Idea\Entity\IdeaEntity;
+use Zemiel\Module\Idea\Entity\IdeaEntity;
 
 class IdeaEntityTest
 {

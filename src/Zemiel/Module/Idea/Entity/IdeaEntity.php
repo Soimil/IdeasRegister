@@ -6,7 +6,7 @@
  * Time: 7:15 PM
  */
 
-namespace Module\Idea\Entity;
+namespace Zemiel\Module\Idea\Entity;
 
 class IdeaEntity
 {
