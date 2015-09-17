@@ -18,11 +18,11 @@ class TestClass extends AbstractEntity
     protected $price;
     protected $height;
 
-    public function testOne()
-    {
-        return $this->getProperties();
-    }
-
+//    public function testOne()
+//    {
+//        return $this->getProperties();
+//    }
+//
     public function setHeight($data)
     {
         if($data > 220 || !is_int($data)) {
@@ -39,7 +39,7 @@ class AbstractEntityTest extends \PHPUnit_Framework_TestCase
 
     public function testPushAndPop()
     {
-        $data = ['name' => 'Piotr', 'type' => 'men', 'color' => 'white', 'price' => 0, 'height' => 350];
+        $data = ['name' => 'Piotr', 'type' => 'men', 'color' => 'white', 'price' => 0, 'height' => 150];
 
         $a = new TestClass();
         $a->setEntityData($data);

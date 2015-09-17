@@ -17,12 +17,11 @@ class ServiceTest extends AbstractService
 
 class AbstractServiceTest extends \PHPUnit_Framework_TestCase
 {
-
-    public function testAbstractClass()
-    {
-        $abstractClass = new \ReflectionClass('Zemiel\Service\AbstractService');
-        var_dump($abstractClass->isAbstract());
-    }
+//
+//    public function testAbstractClass()
+//    {
+//        $abstractClass = new \ReflectionClass('Zemiel\Service\AbstractService');
+//    }
 
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Service\AbstractServiceTest::getValidStrings
