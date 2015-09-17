@@ -20,7 +20,7 @@ abstract class AbstractMapper
      */
     public function setName($name)
     {
-        if (!(is_string($name)) || preg_match('/\s/', $name) > 0 || strlen($name) === 0) {
+        if (!(is_string($name)) || preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]//\s/', $name) > 0 || strlen($name) === 0) {
             throw new \InvalidArgumentException('Mapper name can\'t by empty and must be string.');
         }
 
