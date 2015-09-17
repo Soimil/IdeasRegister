@@ -53,6 +53,7 @@ class IdeaEntity extends AbstractEntity
      */
     public function setTitle($title)
     {
+
         if (!(is_string($title)) || strlen($title) === 0) {
             throw new \InvalidArgumentException('Title must by string and can\'t by empty.');
         }
