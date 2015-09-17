@@ -8,7 +8,7 @@
 
 namespace tests\Zemiel\Module\User\Service;
 
-use Zemiel\Module\Service\AbstractService;
+use Zemiel\Service\AbstractService;
 
 class UserTest extends AbstractService
 {
