@@ -10,12 +10,12 @@ namespace Tests\Zemiel\Module\User\Entity;
 
 use Zemiel\Entity\AbstractEntity;
 
-class UserEntityTest extends AbstractEntity
-{
-
-}
-
-class EntityTest extends \PHPUnit_Framework_TestCase
-{
-
-}
+//class UserEntityTest extends AbstractEntity
+//{
+//
+//}
+//
+//class EntityTest extends \PHPUnit_Framework_TestCase
+//{
+//
+//}

@@ -10,12 +10,12 @@ namespace Tests\Zemiel\Module\Idea\Service;
 
 use Zemiel\Service\AbstractService;
 
-class TestIdea extends AbstractService
-{
-
-}
-
-class IdeaServiceTest extends \PHPUnit_Framework_TestCase
-{
-
-}
+//class TestIdea extends AbstractService
+//{
+//
+//}
+//
+//class IdeaServiceTest extends \PHPUnit_Framework_TestCase
+//{
+//
+//}
