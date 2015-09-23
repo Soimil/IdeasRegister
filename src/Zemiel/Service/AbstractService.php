@@ -74,23 +74,4 @@ abstract class AbstractService
         return $this;
     }
 
-    /**
-     * getting names all setting mappers
-     *
-     * @return string
-     */
-    public function getMappersSetNames()
-    {
-        if (!$this->mappers) {
-            throw new \InvalidArgumentException('There is no set yet any mappers');
-        }
-
-        $names = '';
-        foreach ($this->mappers as $mapper) {
-            $names .= $mapper->getName() . ', ';
-        }
-
-        return substr($names, 0, -2);
-    }
-
 }
