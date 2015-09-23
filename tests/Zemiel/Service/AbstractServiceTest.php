@@ -26,14 +26,12 @@ class AbstractServiceTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Service\AbstractServiceTest::getValidStrings
-     * @expectedException \PHPUnit_Framework_Error
-     * @expectedExceptionMessage  __construct() must be of the type object, string given
      */
     public function testValidStrings($mapper)
     {
         $TestMapper = new UserService($mapper);
 
-//        $TestMapper->addMapper($mapper);
+        $TestMapper->addMapper($mapper);
         $TestMapper->setCurrentMapper($mapper->getName());
 
         $this->assertEquals($mapper, $TestMapper->getCurrentMapper());
@@ -43,7 +41,7 @@ class AbstractServiceTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Service\AbstractServiceTest::getInvalidString
      * @expectedException \PHPUnit_Framework_Error
-     * @expectedExceptionMessage  __construct() must be of the type object, string given
+     * @expectedExceptionMessage  must be an instance of Zemiel\Mapper\AbstractMapper
      */
     public function testInvalidString($mapper)
     {
