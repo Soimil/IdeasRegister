@@ -30,7 +30,6 @@ abstract class AbstractService
      * setting current mapper
      *
      * @param string $mapperName
-     * @internal param $currentMapper
      * @return $this
      */
     public function setCurrentMapper($mapperName)

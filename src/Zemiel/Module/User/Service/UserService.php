@@ -28,16 +28,6 @@ class UserService extends AbstractService
     }
 
     /**
-     * getting service name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-
-    }
-
-    /**
      * getting User object by id
      *
      * @param integer $userId
