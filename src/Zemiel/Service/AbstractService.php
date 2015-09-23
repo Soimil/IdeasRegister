@@ -15,15 +15,9 @@ abstract class AbstractService
 
     /**
      * construct
-     * @param null $mapper
      */
-    public function __construct($mapper = null)
+    public function __construct()
     {
-        if (!$mapper) {
-            $mapper = $this;
-        }
-
-        $this->mappers[$mapper->getName] = $mapper;
 
     }
 

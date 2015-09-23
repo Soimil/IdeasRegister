@@ -9,9 +9,16 @@
 namespace Zemiel\Module\User\Service;
 
 use Zemiel\Service\AbstractService;
+use Zemiel\Module\User\Mapper\UserMapper;
 
 class UserService extends AbstractService
 {
+
+    public function __construct()
+    {
+        $mapper = new UserMapper();
+        $this->mappers[$mapper->getName()] = $mapper;
+    }
 
     /**
      * getting service name
