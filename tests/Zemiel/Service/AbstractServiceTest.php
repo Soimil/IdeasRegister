@@ -9,6 +9,7 @@
 namespace Tests\Zemiel\Service;
 
 use Zemiel\Service\AbstractService;
+use Zemiel\Module\User\Service\UserService;
 
 class ServiceTest extends AbstractService
 {
@@ -25,12 +26,14 @@ class AbstractServiceTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Service\AbstractServiceTest::getValidStrings
+     * @expectedException \PHPUnit_Framework_Error
+     * @expectedExceptionMessage  __construct() must be of the type object, string given
      */
     public function testValidStrings($mapper)
     {
-        $TestMapper = new ServiceTest();
+        $TestMapper = new UserService($mapper);
 
-        $TestMapper->addMapper($mapper);
+//        $TestMapper->addMapper($mapper);
         $TestMapper->setCurrentMapper($mapper->getName());
 
         $this->assertEquals($mapper, $TestMapper->getCurrentMapper());
@@ -39,7 +42,8 @@ class AbstractServiceTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Service\AbstractServiceTest::getInvalidString
-     * @expectedException InvalidArgumentException
+     * @expectedException \PHPUnit_Framework_Error
+     * @expectedExceptionMessage  __construct() must be of the type object, string given
      */
     public function testInvalidString($mapper)
     {

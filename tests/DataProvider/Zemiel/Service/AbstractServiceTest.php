@@ -8,8 +8,7 @@
 
 namespace Tests\DataProvider\Zemiel\Service;
 
-use Zemiel\Module\Idea\Service\IdeaService;
-use Zemiel\Module\User\Service\UserService;
+use Zemiel\Module\User\Mapper\UserMapper;
 
 class AbstractServiceTest
 {
@@ -17,10 +16,10 @@ class AbstractServiceTest
     {
         return [
             [
-                $service = new UserService()
+                $service = new UserMapper()
             ],
             [
-                $service = new IdeaService()
+                $service = new UserMapper()
             ],
         ];
     }

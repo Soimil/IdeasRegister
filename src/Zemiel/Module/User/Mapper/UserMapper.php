@@ -8,8 +8,12 @@
 
 namespace Zemiel\Module\User\Mapper;
 
+use Zemiel\Mapper\AbstractMapper;
 
-class UserMapper
+class UserMapper extends  AbstractMapper
 {
-
+    public function gatName()
+    {
+        return 'UserMapper';
+    }
 }
