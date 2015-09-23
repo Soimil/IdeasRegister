@@ -16,7 +16,7 @@ class UserService extends AbstractService
 {
 
     /**
-     * @param null|object|AbstractMapper $mapper
+     * @param null|AbstractMapper $mapper
      */
     public function __construct(AbstractMapper $mapper = null)
     {

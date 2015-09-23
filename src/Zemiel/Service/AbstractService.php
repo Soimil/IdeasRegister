@@ -17,7 +17,7 @@ abstract class AbstractService
 
     /**
      * construct
-     * @param null|object|AbstractMapper $mapper
+     * @param null|AbstractMapper $mapper
      */
     public function __construct(AbstractMapper $mapper = null)
     {
@@ -65,9 +65,6 @@ abstract class AbstractService
      */
     public function addMapper(AbstractMapper $mapper)
     {
-        if (!is_object($mapper)) {
-            throw new \InvalidArgumentException('Mapper can\'t by empty and must by mapper object.');
-        }
         $this->mappers[$mapper->getName()] = $mapper;
     }
 
