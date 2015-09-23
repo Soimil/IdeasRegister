@@ -16,9 +16,11 @@ abstract class AbstractService
     /**
      * construct
      */
-    public function __construct()
+    public function __construct($mapper = null)
     {
-
+        if ($mapper && !(is_object($mapper))) {
+            throw new \InvalidArgumentException('Mapper must by object');
+        }
     }
 
     /**

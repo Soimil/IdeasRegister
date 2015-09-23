@@ -14,9 +14,12 @@ use Zemiel\Module\User\Mapper\UserMapper;
 class UserService extends AbstractService
 {
 
-    public function __construct()
+    public function __construct($mapper = null)
     {
-        $mapper = new UserMapper();
+        if (!$mapper) {
+            $mapper = new UserMapper();
+        }
+
         $this->mappers[$mapper->getName()] = $mapper;
     }
 
