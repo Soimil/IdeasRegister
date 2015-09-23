@@ -12,7 +12,6 @@ use Zemiel\Service\AbstractService;
 
 class UserService extends AbstractService
 {
-    const SERVICE_NAME = 'UserService';
 
     /**
      * getting service name
@@ -21,7 +20,7 @@ class UserService extends AbstractService
      */
     public function getName()
     {
-        return self::SERVICE_NAME;
+
     }
 
     /**

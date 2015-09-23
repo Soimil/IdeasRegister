@@ -10,7 +10,6 @@ namespace Zemiel\Service;
 
 abstract class AbstractService
 {
-    protected $name;
     protected $currentMapper;
     protected $mappers = [];
 
@@ -28,7 +27,6 @@ abstract class AbstractService
      *
      * @param string $mapperName
      * @internal param $currentMapper
-     * @return
      */
     public function setCurrentMapper($mapperName)
     {
