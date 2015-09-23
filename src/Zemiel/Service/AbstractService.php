@@ -8,6 +8,8 @@
 
 namespace Zemiel\Service;
 
+use Zemiel\Mapper\AbstractMapper;
+
 abstract class AbstractService
 {
     protected $currentMapper;
@@ -15,8 +17,9 @@ abstract class AbstractService
 
     /**
      * construct
+     * @param null|object|AbstractMapper $mapper
      */
-    public function __construct($mapper = null)
+    public function __construct(AbstractMapper $mapper = null)
     {
         if ($mapper && !(is_object($mapper))) {
             throw new \InvalidArgumentException('Mapper must by object');
@@ -58,9 +61,9 @@ abstract class AbstractService
     /**
      * agging mapper object to mappers
      *
-     * @param object $mapper
+     * @param object|AbstractMapper $mapper
      */
-    public function addMapper($mapper)
+    public function addMapper(AbstractMapper $mapper)
     {
         if (!is_object($mapper)) {
             throw new \InvalidArgumentException('Mapper can\'t by empty and must by mapper object.');

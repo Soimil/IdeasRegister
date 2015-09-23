@@ -10,17 +10,21 @@ namespace Zemiel\Module\User\Service;
 
 use Zemiel\Service\AbstractService;
 use Zemiel\Module\User\Mapper\UserMapper;
+use Zemiel\Mapper\AbstractMapper;
 
 class UserService extends AbstractService
 {
 
-    public function __construct($mapper = null)
+    /**
+     * @param null|object|AbstractMapper $mapper
+     */
+    public function __construct(AbstractMapper $mapper = null)
     {
         if (!$mapper) {
             $mapper = new UserMapper();
         }
 
-        $this->mappers[$mapper->getName()] = $mapper;
+        $this->addMapper($mapper);
     }
 
     /**
