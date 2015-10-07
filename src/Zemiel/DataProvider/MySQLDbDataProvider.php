@@ -3,13 +3,13 @@
  * Created by PhpStorm.
  * User: piotr
  * Date: 10/7/15
- * Time: 10:48 PM
+ * Time: 11:01 PM
  */
 
-namespace Zemiel\Service;
+namespace Zemiel\DataProvider;
 
 
-class DbService
+class MySQLDbDataProvider
 {
     protected static $db;
 
