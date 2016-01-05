@@ -8,14 +8,14 @@
 
 namespace Tests\Zemiel\Module\User\Service;
 
-use Zemiel\Service\AbstractService;
+use Zemiel\Module\User\Service\UserService;
 
-//class UserTest extends AbstractService
-//{
-//
-//}
-//
-//class UserServiceTest extends \PHPUnit_Framework_TestCase
-//{
-//
-//}
+class UserServiceTest extends \PHPUnit_Framework_TestCase
+{
+    public function testUserService()
+    {
+        $userService = new UserService();
+
+        $userService->setCurrentMapper('UserMapper')->findAll();
+    }
+}

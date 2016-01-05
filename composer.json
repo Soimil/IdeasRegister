@@ -12,7 +12,7 @@
             "Tests\\": "tests/"
         }
     },
-    "require-dev": {
-        "phpunit/phpunit": "4.8.*"
+    "require": {
+        "phpunit/phpunit": "^5.1"
     }
 }

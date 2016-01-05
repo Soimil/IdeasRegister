@@ -11,18 +11,8 @@ namespace Tests\Zemiel\Service;
 use Zemiel\Service\AbstractService;
 use Zemiel\Module\User\Service\UserService;
 
-class ServiceTest extends AbstractService
-{
-
-}
-
 class AbstractServiceTest extends \PHPUnit_Framework_TestCase
 {
-//
-//    public function testAbstractClass()
-//    {
-//        $abstractClass = new \ReflectionClass('Zemiel\Service\AbstractService');
-//    }
 
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Service\AbstractServiceTest::getValidStrings

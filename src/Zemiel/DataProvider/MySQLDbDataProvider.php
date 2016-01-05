@@ -16,9 +16,27 @@ class MySQLDbDataProvider
     protected function getDb()
     {
         if (self::$db == null) {
-            self::$db = new \PDO('mysql:host=localhost;dbname=Ideas', 'root', 'root');
+//            self::$db = new \PDO('mysql:host=localhost;dbname=Ideas', 'root', 'root');
+            $m = new \MongoClient();
+            self::$db = $m->ideas;
+            
         }
 
         return self::$db;
+    }
+
+    public function findAll()
+    {
+
+    }
+
+    public function findOne()
+    {
+
+    }
+
+    public function findOneBy()
+    {
+
     }
 }
