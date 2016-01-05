@@ -11,7 +11,7 @@ namespace Tests\Zemiel\Service;
 use Zemiel\Service\AbstractService;
 use Zemiel\Module\User\Service\UserService;
 
-class AbstractServiceTest extends \PHPUnit_Framework_TestCase
+abstract class AbstractServiceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -35,7 +35,7 @@ class AbstractServiceTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidString($mapper)
     {
-        $TestMapper = new ServiceTest();
+        $TestMapper = new UserService();
 
         $TestMapper->addMapper($mapper);
         $TestMapper->setCurrentMapper($mapper->getName());

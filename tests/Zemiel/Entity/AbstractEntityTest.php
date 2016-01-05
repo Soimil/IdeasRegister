@@ -34,7 +34,7 @@ class TestClass extends AbstractEntity
 
 }
 
-class AbstractEntityTest extends \PHPUnit_Framework_TestCase
+abstract class AbstractEntityTest extends \PHPUnit_Framework_TestCase
 {
 
     public function testPushAndPop()

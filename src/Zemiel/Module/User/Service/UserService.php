@@ -42,7 +42,7 @@ class UserService extends AbstractService
      */
     public function findAll()
     {
-        return $this->getCurrentMapper()->findAll();
+
     }
 
     /**
