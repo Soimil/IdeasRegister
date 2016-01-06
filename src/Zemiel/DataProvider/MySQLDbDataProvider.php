@@ -8,35 +8,39 @@
 
 namespace Zemiel\DataProvider;
 
-
 class MySQLDbDataProvider
 {
+    /**
+     * @var \MongoDB
+     */
     protected static $db;
 
-    protected function getDb()
-    {
-        if (self::$db == null) {
-//            self::$db = new \PDO('mysql:host=localhost;dbname=Ideas', 'root', 'root');
-            $m = new \MongoClient();
-            self::$db = $m->ideas;
-            
-        }
+    /**
+     * @var array
+     */
+    protected static $options = [
+        'journal' => true,
+        'readPreference' => 'secondary',
+    ];
 
+    protected static $uri = 'mongodb://localhost/';
+
+    /**
+     * MySQLDbDataProvider constructor.
+     */
+    protected function __construct()
+    {
+        $m = new \MongoClient(self::$uri, self::$options);
+        self::$db = $m->ideas_register;
         return self::$db;
     }
 
-    public function findAll()
+    /**
+     * @return \MongoDB|MySQLDbDataProvider
+     */
+    public static function getInstance()
     {
-
+        return self::$db ? self::$db : new self();
     }
 
-    public function findOne()
-    {
-
-    }
-
-    public function findOneBy()
-    {
-
-    }
 }
