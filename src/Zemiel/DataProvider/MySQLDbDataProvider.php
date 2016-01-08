@@ -8,12 +8,12 @@
 
 namespace Zemiel\DataProvider;
 
-use \MongoDB\Driver\Manager;
-use \MongoDB\Driver\BulkWrite;
-use \MongoDB\Driver\Query;
-use \MongoDB\Driver\ReadPreference;
-use \MongoDB\Driver\WriteConcern;
-use \MongoDB\Collection;
+use MongoDB\Driver\Manager;
+use MongoDB\Driver\BulkWrite;
+use MongoDB\Driver\Query;
+use MongoDB\Driver\ReadPreference;
+use MongoDB\Driver\WriteConcern;
+use MongoDB\Collection;
 
 class MySQLDbDataProvider
 {
@@ -92,7 +92,7 @@ class MySQLDbDataProvider
      */
     protected function setBulk()
     {
-        self::$bulk = new BulkWrite();
+        self::$bulk = new BulkWrite;
     }
 
     /**
