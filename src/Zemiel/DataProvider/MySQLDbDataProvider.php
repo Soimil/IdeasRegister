@@ -8,12 +8,12 @@
 
 namespace Zemiel\DataProvider;
 
-use MongoDB\Driver\Manager;
-use MongoDB\Driver\BulkWrite;
-use MongoDB\Driver\Query;
-use MongoDB\Driver\ReadPreference;
-use MongoDB\Driver\WriteConcern;
-use MongoDB\Collection;
+use \MongoDB\Driver\Manager;
+use \MongoDB\Driver\BulkWrite;
+use \MongoDB\Driver\Query;
+use \MongoDB\Driver\ReadPreference;
+use \MongoDB\Driver\WriteConcern;
+use \MongoDB\Collection;
 
 class MySQLDbDataProvider
 {
