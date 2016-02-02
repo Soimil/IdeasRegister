@@ -12,8 +12,8 @@ use MongoDB\Driver\Manager;
 use MongoDB\Driver\BulkWrite;
 use MongoDB\Driver\Query;
 use MongoDB\Driver\ReadPreference;
+use MongoDB\Driver\Command;
 use MongoDB\Driver\WriteConcern;
-use MongoDB\Collection;
 
 class MySQLDbDataProvider
 {
@@ -25,6 +25,7 @@ class MySQLDbDataProvider
     protected static $readPreference;
     protected static $bulk;
     protected static $query;
+    protected static $command;
 
     protected static $uri = 'mongodb://localhost:27017';
     protected static $preference = [
@@ -44,7 +45,6 @@ class MySQLDbDataProvider
         self::setWriteConcern();
         self::setReadPreference();
         self::setBulk();
-        self::setQuery();
     }
 
     /**
@@ -92,7 +92,7 @@ class MySQLDbDataProvider
      */
     protected function setBulk()
     {
-        self::$bulk = new BulkWrite;
+        self::$bulk = new BulkWrite(['ordered' => true]);
     }
 
     /**
@@ -101,10 +101,24 @@ class MySQLDbDataProvider
      * setting MongoDB Query
      *
      * @protected
+     * @param array $array
      */
-    protected function setQuery()
+    protected function setQuery($array = [])
     {
-        self::$query = new Query([]);
+        self::$query = new Query($array);
+    }
+
+    /**
+     * setCommand
+     *
+     * setting MongoDb Command
+     *
+     * @protected
+     * @param array $array
+     */
+    protected function setCommand($array = [])
+    {
+        self::$command = new Command($array);
     }
 
     /**
@@ -173,10 +187,18 @@ class MySQLDbDataProvider
      *
      * getting Query
      *
+     * @param array $array
      * @return mixed
      */
-    public function getQuery()
+    public function getQuery($array = [])
     {
+        self::setQuery($array);
         return self::$query;
+    }
+
+    public function gatCommand($array = [])
+    {
+        self::setCommand($array);
+        return self::$command;
     }
 }
