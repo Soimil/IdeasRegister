@@ -6,9 +6,9 @@
  * Time: 9:54 PM
  */
 
-namespace Tests\DataProvider\Zemiel\Mapper;
+namespace Tests\DataProvider\Zemiel\Gateway;
 
-class AbstractMapperTest
+abstract class AbstractGatewayTest
 {
     public static function getValidStrings()
     {

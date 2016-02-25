@@ -42,44 +42,7 @@ class MySQLDbDataProvider extends \PHPUnit_Framework_TestCase
         $hannes_id  = $bulk->insert($hannes);
         $hayley_id  = $bulk->insert($hayley);
         $jonpall_id = $bulk->insert($jonpall);
-//
-//        $bulk->update(
-//            ["_id" => $hayley_id],
-//            ['$set' => ["citizen" => "Iceland"]],
-//            ["limit" => 1, "upsert" => false]
-//        );
-//        $bulk->update(
-//            ["citizen" => "Iceland"],
-//            ['$set' => ["viking" => true]],
-//            ["limit" => 0, "upsert" => false]
-//        );
-//        $bulk->update(
-//            ["name" => "Chuck Norris"],
-//            ['$set' => ["viking" => false]],
-//            ["limit" => 1, "upsert" => true]
-//        );
-//        $bulk->delete(
-//            ["_id" => $jonpall_id],
-//            ["limit" => 1]
-//        );
-//        var_dump($hannes_id);
-//
-//        try {
-//            $result = $manager->executeBulkWrite("db.collection", $bulk, $wc);
-//            var_dump($result);
-//        } catch (Exception $e) {
-//            echo $e->getMessage(), "\n";
-//        }
-//
-//        printf("insertedCount: %d\n", $result->getInsertedCount());
-//        printf("matchedCount:  %d\n", $result->getMatchedCount());
-//        printf("modifiedCount: %d\n", $result->getModifiedCount());
-//        printf("upsertedCount: %d\n", $result->getUpsertedCount());
-//        printf("deletedCount:  %d\n", $result->getDeletedCount());
-//
-//        foreach ($result->getUpsertedIds() as $index => $id) {
-//            printf("upsertedId: '%s', index: %d\n", $id, $index);
-//        }
+
     }
 
     /**

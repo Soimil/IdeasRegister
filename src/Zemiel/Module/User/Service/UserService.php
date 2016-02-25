@@ -8,23 +8,24 @@
 
 namespace Zemiel\Module\User\Service;
 
+use Zemiel\Gateway\AbstractGateway;
+use Zemiel\Module\User\Gateway\UserGateway;
 use Zemiel\Service\AbstractService;
-use Zemiel\Module\User\Mapper\UserMapper;
-use Zemiel\Mapper\AbstractMapper;
+
 
 class UserService extends AbstractService
 {
 
     /**
-     * @param null|AbstractMapper $mapper
+     * @param null|AbstractGateway|AbstractGateway $gateway
      */
-    public function __construct(AbstractMapper $mapper = null)
+    public function __construct(AbstractGateway $gateway = null)
     {
-        if (!$mapper) {
-            $mapper = new UserMapper();
+        if (!$gateway) {
+            $gateway = new UserGateway();
         }
 
-        $this->addMapper($mapper);
+        $this->addGateway($gateway);
     }
 
     /**

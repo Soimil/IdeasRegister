@@ -16,6 +16,6 @@ class UserServiceTest extends \PHPUnit_Framework_TestCase
     {
         $userService = new UserService();
 
-        $userService->setCurrentMapper('UserMapper')->findAll();
+        $userService->setCurrentGateway('UserGateway')->findAll();
     }
 }

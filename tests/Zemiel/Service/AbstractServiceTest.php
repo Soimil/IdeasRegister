@@ -16,30 +16,33 @@ abstract class AbstractServiceTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Service\AbstractServiceTest::getValidStrings
+     * @param $gateway
+     * @internal param $gateway
      */
-    public function testValidStrings($mapper)
+    public function testValidStrings($gateway)
     {
-        $TestMapper = new UserService($mapper);
+        $TestGateway = new UserService($gateway);
 
-        $TestMapper->addMapper($mapper);
-        $TestMapper->setCurrentMapper($mapper->getName());
+        $TestGateway->addGateway($gateway);
+        $TestGateway->setCurrentGateway($gateway->getName());
 
-        $this->assertEquals($mapper, $TestMapper->getCurrentMapper());
+        $this->assertEquals($gateway, $TestGateway->getCurrentGateway());
 
     }
 
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Service\AbstractServiceTest::getInvalidString
      * @expectedException \PHPUnit_Framework_Error
-     * @expectedExceptionMessage  must be an instance of Zemiel\Mapper\AbstractMapper
+     * @expectedExceptionMessage  must be an instance of Zemiel\Gateway\AbstractGateway
+     * @param $gateway
      */
-    public function testInvalidString($mapper)
+    public function testInvalidString($gateway)
     {
-        $TestMapper = new UserService();
+        $TestGateway = new UserService($gateway);
 
-        $TestMapper->addMapper($mapper);
-        $TestMapper->setCurrentMapper($mapper->getName());
+        $TestGateway->addGateway($gateway);
+        $TestGateway->setCurrentGateway($gateway->getName());
 
-        $this->assertEquals($mapper, $TestMapper->getCurrentMapper());
+        $this->assertEquals($gateway, $TestGateway->getCurrentGateway());
     }
 }

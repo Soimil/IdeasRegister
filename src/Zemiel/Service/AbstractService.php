@@ -8,42 +8,42 @@
 
 namespace Zemiel\Service;
 
-use Zemiel\Mapper\AbstractMapper;
+use Zemiel\Gateway\AbstractGateway;
 
 abstract class AbstractService
 {
-    protected $currentMapper;
-    protected $mappers = [];
+    protected $currentGateway;
+    protected $gateways = [];
 
     /**
      * construct
-     * @param null|AbstractMapper $mapper
+     * @param null|AbstractGateway $gateway
      */
-    public function __construct(AbstractMapper $mapper = null)
+    public function __construct(AbstractGateway $gateway = null)
     {
-        if ($mapper && !(is_object($mapper))) {
-            throw new \InvalidArgumentException('Mapper must by object');
+        if ($gateway && !(is_object($gateway))) {
+            throw new \InvalidArgumentException('Gateway must by object');
         }
     }
 
     /**
-     * setting current mapper
+     * setting current Gateway
      *
-     * @param string $mapperName
+     * @param string $gatewayName
      * @return $this
      */
-    public function setCurrentMapper($mapperName)
+    public function setCurrentGateway($gatewayName)
     {
-        if (!(is_string($mapperName)) || preg_match('/\s/', $mapperName) > 0 || strlen($mapperName) === 0) {
-            throw new \InvalidArgumentException('Mapper name can\'t by empty and must by string.');
+        if (!(is_string($gatewayName)) || preg_match('/\s/', $gatewayName) > 0 || strlen($gatewayName) === 0) {
+            throw new \InvalidArgumentException('Gateway name can\'t by empty and must by string.');
         }
 
-        if (!$this->mappers) {
-            throw new \InvalidArgumentException('There is no set yet any mappers');
+        if (!$this->gateways) {
+            throw new \InvalidArgumentException('There is no set yet any gateways');
         }
 
-        if (array_key_exists($mapperName, $this->mappers)) {
-            $this->currentMapper = $this->mappers[$mapperName];
+        if (array_key_exists($gatewayName, $this->gateways)) {
+            $this->currentGateway = $this->gateways[$gatewayName];
         }
 
         return $this;
@@ -51,24 +51,24 @@ abstract class AbstractService
     }
 
     /**
-     * getting mapper
+     * getting gateway
      *
      * @return null|object
      */
-    public function getCurrentMapper()
+    public function getCurrentGateway()
     {
-        return $this->currentMapper;
+        return $this->currentGateway;
     }
 
     /**
-     * adding mapper object to mappers
+     * adding Gateway object to gateways
      *
-     * @param object|AbstractMapper $mapper
+     * @param object|AbstractGateway $gateway
      * @return $this
      */
-    public function addMapper(AbstractMapper $mapper)
+    public function addGateway(AbstractGateway $gateway)
     {
-        $this->mappers[$mapper->getName()] = $mapper;
+        $this->gateways[$gateway->getName()] = $gateway;
 
         return $this;
     }

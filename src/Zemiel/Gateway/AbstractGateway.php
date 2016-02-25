@@ -6,14 +6,14 @@
  * Time: 10:14 PM
  */
 
-namespace Zemiel\Mapper;
+namespace Zemiel\Gateway;
 
-abstract class AbstractMapper
+abstract class AbstractGateway
 {
     protected $name;
 
     /**
-     * setting Mapper name
+     * setting Gateway name
      *
      * @param string $name
      * @return $this
@@ -21,7 +21,7 @@ abstract class AbstractMapper
     public function setName($name)
     {
         if (!(is_string($name)) || preg_match('/[^a-z_\-0-9]/i', $name) > 0 || strlen($name) === 0) {
-            throw new \InvalidArgumentException('Mapper name can\'t by empty and must be string.');
+            throw new \InvalidArgumentException('Gateway name can\'t by empty and must be string.');
         }
 
         $this->name = $name;
@@ -29,7 +29,7 @@ abstract class AbstractMapper
     }
 
     /**
-     * getting mapper name
+     * getting Gateway name
      *
      * @return string
      */

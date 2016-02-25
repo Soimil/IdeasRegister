@@ -6,10 +6,10 @@
  * Time: 9:42 PM
  */
 
-namespace tests\Zemiel\Module\User\Mapper;
+namespace tests\Zemiel\Module\User\Gateway;
 
 
-class UserMapperTest
+class UserGatewayTest
 {
 
 }
