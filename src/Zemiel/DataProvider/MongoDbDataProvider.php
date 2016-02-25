@@ -15,7 +15,7 @@ use MongoDB\Driver\ReadPreference;
 use MongoDB\Driver\Command;
 use MongoDB\Driver\WriteConcern;
 
-class MySQLDbDataProvider
+class MongoDbDataProvider
 {
     /**
      * @var \MongoDB
@@ -127,7 +127,7 @@ class MySQLDbDataProvider
      * getting Instance This Class
      *
      * @static
-     * @return \MongoDB|MySQLDbDataProvider
+     * @return \MongoDB|MongoDbDataProvider
      */
     public static function getInstance()
     {

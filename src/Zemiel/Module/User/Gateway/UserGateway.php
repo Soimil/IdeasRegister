@@ -12,7 +12,7 @@ use Zemiel\Gateway\AbstractGateway;
 
 class UserGateway extends  AbstractGateway
 {
-    public function gatName()
+    public function getName()
     {
         return 'UserGateway';
     }

@@ -8,6 +8,9 @@
 
 namespace Zemiel\Gateway;
 
+use Zemiel\Request\Request;
+
+
 abstract class AbstractGateway
 {
     protected $name;
@@ -39,5 +42,15 @@ abstract class AbstractGateway
             return get_class($this);
         }
         return $this->name;
+    }
+
+    /**
+     * search
+     *
+     * @param Request $request
+     */
+    public function search(Request $request)
+    {
+
     }
 }
