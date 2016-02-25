@@ -17,11 +17,6 @@ class GatewayTest extends AbstractGateway
 
 class AbstractGatewayTest extends \PHPUnit_Framework_TestCase
 {
-//    public function testAbstractClass()
-//    {
-//
-//    }
-
     /**
      * @dataProvider Tests\DataProvider\Zemiel\Gateway\AbstractGatewayTest::getValidStrings
      * @param $name
