@@ -9,9 +9,9 @@
 namespace tests\Zemiel\DataProvider;
 
 use MongoDB\Driver\Exception\Exception;
-use Zemiel\DataProvider\MySQLDbDataProvider as MySql;
+use Zemiel\DataProvider\MongoDbDataProvider as MongoDb;
 
-class MySQLDbDataProvider extends \PHPUnit_Framework_TestCase
+class MongoDbDataProvider extends \PHPUnit_Framework_TestCase
 {
     /**
      * testCreate
@@ -34,7 +34,7 @@ class MySQLDbDataProvider extends \PHPUnit_Framework_TestCase
             "citizen" => "Iceland",
         ];
 
-        $mongoDb = MySql::getInstance();
+        $mongoDb = MongoDb::getInstance();
         $manager = $mongoDb->getManager();
         $wc = $mongoDb->getWriteConcern();
         $bulk = $mongoDb->getBulk();
@@ -50,7 +50,7 @@ class MySQLDbDataProvider extends \PHPUnit_Framework_TestCase
      */
     public function testGetQuery()
     {
-        $mongoDb = MySql::getInstance();
+        $mongoDb = MongoDb::getInstance();
         $manager = $mongoDb->getManager();
 
         $query = $mongoDb->getQuery();
@@ -75,7 +75,7 @@ class MySQLDbDataProvider extends \PHPUnit_Framework_TestCase
 
         $options = ["limit" => 1, "upsert" => false];
 
-        $mongoDb = MySql::getInstance();
+        $mongoDb = MongoDb::getInstance();
         $manager = $mongoDb->getManager();
         $wc = $mongoDb->getWriteConcern();
         $bulk = $mongoDb->getBulk();
@@ -97,7 +97,7 @@ class MySQLDbDataProvider extends \PHPUnit_Framework_TestCase
         $filter = ["hello" => "world"];
         $options = ["limit" => 1];
 
-        $mongoDb = MySql::getInstance();
+        $mongoDb = MongoDb::getInstance();
         $manager = $mongoDb->getManager();
         $wc = $mongoDb->getWriteConcern();
         $bulk = $mongoDb->getBulk();
