@@ -9,7 +9,7 @@
 namespace Zemiel\Module\User\Service;
 
 use Zemiel\Gateway\AbstractGateway;
-use Zemiel\Module\User\Gateway\UserGateway;
+use Zemiel\Module\User\Gateway\MongoDbUserGateway;
 use Zemiel\Service\AbstractService;
 
 
@@ -22,8 +22,10 @@ class UserService extends AbstractService
     public function __construct(AbstractGateway $gateway = null)
     {
         if (!$gateway) {
-            $gateway = new UserGateway();
+            $gateway = new MongoDbUserGateway();
         }
+
+        parent::__construct($gateway);
 
         $this->addGateway($gateway);
     }
@@ -43,7 +45,8 @@ class UserService extends AbstractService
      */
     public function findAll()
     {
-
+        $gateway = $this->getCurrentGateway();
+        var_dump($gateway);
     }
 
     /**
